@@ -22,5 +22,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 
+Route::view('services','site.services');
+
 
 Route::get('/logout',[Controller::class , 'logout'])->name('logout');
+
