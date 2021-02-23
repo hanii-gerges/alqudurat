@@ -1,4 +1,4 @@
-@extends('layouts.master_layout')
+@extends('layouts.app')
 
 @section('content')
 <!-- Top Statistics -->

@@ -21,12 +21,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::view('myprofile','backend.profile.my_profile');
-
-Route::view('change/password','backend.profile.change_password');
-
-Route::view('messages','backend.profile.messages');
-
 
 
 Route::get('/logout',[Controller::class , 'logout'])->name('logout');
