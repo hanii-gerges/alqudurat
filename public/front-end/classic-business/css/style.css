@@ -5,7 +5,7 @@
 
 /*  - Fonts
     - Scrollbar
-    - General   
+    - General
     - Loader
     - Navbar
     - Side Menu
@@ -1681,3 +1681,20 @@ footer p {
     font-size: 12px;
   }
 }
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+    background: #032a58;
+    /* color:#ffffff; */
+  }
+
+  .dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+      pointer-events: none;
+  }
+
+  .dropdown:hover>.dropdown-menu .dropdown-item{
+    /* background: #032a58; */
+    color:aqua;
+
+  }

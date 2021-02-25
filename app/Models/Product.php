@@ -15,10 +15,15 @@ class Product extends Model implements HasMedia
     protected $fillable = [
         'category_id',
         'title',
-        'description',
+        'image',
+        'description'
     ];
-    function category()
+
+    function Categories()
     {
         $this->belongsTo(Category::class);
     }
+
+    
+
 }

@@ -19,8 +19,20 @@ class Category extends Model implements HasMedia
         'image',
     ];
 
+    protected $fillable = [
+        'name',
+        'image',
+        'description'
+    ];
+
     function Products()
     {
         return $this->hasMany(Product::class);
+    }
+
+
+    function Types()
+    {
+        return $this->hasMany(Type::class);
     }
 }
