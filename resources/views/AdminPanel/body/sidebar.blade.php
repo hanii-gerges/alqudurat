@@ -20,7 +20,7 @@
               <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
             </g>
           </svg>
-          <span class="brand-name">Sleek Dashboard</span>
+          <span class="brand-name">Dashboard</span>
         </a>
       </div>
       <!-- begin sidebar scrollbar -->
@@ -163,24 +163,58 @@
 
 
 
-                      <li >
-                        <a class="sidenav-item-link" href="user-profile.html">
-                          <span class="nav-text">Create Category</span>
+                  
+                  <li >
+                    <a class="sidenav-item-link" href="/admin/categories">
+                      <span class="nav-text">View Categories</span>
+                      
+                    </a>
+                  </li>
 
-                        </a>
-                      </li>
+                  <li >
+                    <a class="sidenav-item-link" href="/categories/create">
+                      <span class="nav-text">Create Category</span>
 
-                      <li >
-                          <a class="sidenav-item-link" href="user-profile.html">
-                            <span class="nav-text">View Categories</span>
+                    </a>
+                  </li>
 
-                            <span class="badge badge-success">5</span>
-                          </a>
-                        </li>
 
                 </div>
               </ul>
             </li>
+
+            <li  class="has-sub" >
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#products"
+                aria-expanded="false" aria-controls="products">
+                <i class="mdi mdi-image-filter-none"></i>
+                <span class="nav-text">Products</span> <b class="caret"></b>
+              </a>
+              <ul  class="collapse"  id="products"
+                data-parent="#sidebar-menu">
+                <div class="sub-menu">
+
+
+
+                  
+                  <li >
+                    <a class="sidenav-item-link" href="/admin/products">
+                      <span class="nav-text">View Products</span>
+                      
+                    </a>
+                  </li>
+
+                  <li >
+                    <a class="sidenav-item-link" href="/products/create">
+                      <span class="nav-text">Create Product</span>
+
+                    </a>
+                  </li>
+
+
+                </div>
+              </ul>
+            </li>
+
 
 
 
@@ -217,7 +251,7 @@
               </ul>
             </li>
 
-
+            
 
         </ul>
 

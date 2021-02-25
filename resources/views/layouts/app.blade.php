@@ -34,7 +34,7 @@
   <!--
     HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
   -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!-- WARNING: Respond.js doesnt work if you view the page via file:// -->
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -58,11 +58,11 @@
           ——— LEFT SIDEBAR WITH FOOTER
           =====================================
         -->
-@include('backend.body.sidebar')
+@include('AdminPanel.body.sidebar')
 
       <div class="page-wrapper">
                   <!-- Header -->
-         @include('backend.body.header')
+         @include('AdminPanel.body.header')
 
         <div class="content-wrapper">
           <div class="content">
@@ -78,7 +78,7 @@
 
         </div>
 
-        @include('backend.body.footer')
+        @include('AdminPanel.body.footer')
 
 
       </div>
@@ -105,9 +105,10 @@
 <script src="{{asset('back-end/assets/js/date-range.js')}}"></script>
 <script src="{{asset('back-end/assets/js/map.js')}}"></script>
 <script src="{{asset('back-end/assets/js/custom.js')}}"></script>
-
-
-
+<script src="//cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+<script>
+  CKEDITOR.replace('ckeditor');
+</script>
 
   </body>
 </html>

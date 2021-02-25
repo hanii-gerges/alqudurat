@@ -2,6 +2,6 @@
 
 @section('content')
 <!-- Top Statistics -->
-@include('backend.body.statistics')
+@include('AdminPanel.body.statistics')
 
 @endsection
