@@ -27,9 +27,15 @@
                 <input type="text" class="form-control col-10" name="title" placeholder="Product Title">
             </div>
             <div class="form-group row">
-                <label class="col-2" for="description">Product Content: </label>
+                <label class="col-2" for="description">Product Description: </label>
                 <div class="col-10">
-                    <textarea class="form-control col-10" id="ckeditor" name="description" cols="30" rows="10" placeholder="Product Content"></textarea>
+                    <textarea class="form-control col-10" id="ckeditorDescription" name="description" cols="30" rows="10" placeholder="Category Description">{{ $product->description }}</textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2" for="content">Product Content: </label>
+                <div class="col-10">
+                    <textarea class="form-control col-10" id="ckeditorContent" name="content" cols="30" rows="10" placeholder="Category Content">{{ $product->content }}</textarea>
                 </div>
             </div>
             <div class="form-group row">

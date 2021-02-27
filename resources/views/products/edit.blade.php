@@ -33,7 +33,11 @@
                 <label class="col-2" for="category_id">Category: </label>
                 <select class="form-control col-4" name="category_id">
                     @foreach ($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @if ($category->id == $product->category_id)
+                            <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
+                        @else
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endif
                     @endforeach
                 </select>
             </div>
@@ -43,9 +47,15 @@
                 <input type="text" class="form-control col-10" name="title" placeholder="product Title" value="{{ $product->title }}">
             </div>
             <div class="form-group row">
-                <label class="col-2" for="description">product Content: </label>
+                <label class="col-2" for="description">Product Description: </label>
                 <div class="col-10">
-                <textarea class="form-control col-10" id="ckeditor" name="description" cols="30" rows="10" placeholder="product Content">{{ $product->description }}</textarea>
+                    <textarea class="form-control col-10" id="ckeditorDescription" name="description" cols="30" rows="10" placeholder="Category Description">{{ $product->description }}</textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2" for="content">Product Content: </label>
+                <div class="col-10">
+                    <textarea class="form-control col-10" id="ckeditorContent" name="content" cols="30" rows="10" placeholder="Category Content">{{ $product->content }}</textarea>
                 </div>
             </div>
             <div class="form-group row">

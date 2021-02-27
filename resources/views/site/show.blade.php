@@ -5,31 +5,42 @@
     <div class="row" style="margin-top:150px;margin-bottom:50px;">
 
         <div class="col-md-6">
+          @if($category->getFirstMedia())
+            <img src="{{ $category->getFirstMedia()->getUrl() }}" alt="Category Image">
+          @else
             <img src="{{asset('front-end\classic-business\categories\building-technology.jpg')}}" alt="Category Image">
 
+          @endif
         </div>
 
         <div class="col-md-6">
-            <h2>{{$category->name}}</h2>
-            <p class="text-justify">{{$category->description}}</p>
+            <h2 class="text-left">{{$category->name}}</h2>
+            <p class="text-left">{!! $category->description !!}</p>
 
         </div>
 
     </div>
     <hr class="border border-secondary">
 
-
-    @if ($photo == 1)
+@if($category->content !== null)
+    <div class="row">
+      <div class="col">
+        {!! $category->content !!}
+      </div>
+    </div>
+@endif
+@if($products->count() > 0)
+    @if ($products->first()->getMedia()->first())
     <div class="row">
     @foreach ($products as $product)
      <div class="col-md-4">
          <div class="card border border-dark" style="width: 18rem;">
-             <img src="{{asset('front-end\classic-business\categories\building-technology.jpg')}}" class="card-img-top" alt="...">
+             {{ $product->getMedia()->first() }}
              <div class="card-body">
                <h5 class="card-title text-center">{{$product->title}}</h5>
               <center>
                  <div class="cube-button">
-                     <a class="btn button btn-rounded btn-light-blue btn-hvr-light-blue" href="{{route('product',$pro->id)}}">
+                     <a class="btn button btn-rounded btn-light-blue btn-hvr-light-blue" href="{{route('product',$product->id)}}">
                         Learn
                         More
                         <div class="btn-hvr-setting">
@@ -56,7 +67,7 @@
 <div class="row mb-5">
     @foreach ($products as $product)
     <div class="col-6">
-              <div class="card border border-secondary" style="background:#bdc3c7;">
+              <div class="card border border-secondary" style="background:#EBF0F5;">
                 {{-- <img src="{{asset('front-end\classic-business\categories\building-technology.jpg')}}" class="card-img-top" alt="..."> --}}
                 <div class="card-body">
                   <h5 class="card-title text-center">{{$product->title}}</h5>
@@ -68,7 +79,7 @@
 
 
 @endif
-
+@endif
 
 
 

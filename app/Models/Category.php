@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
+
 
 
 
@@ -16,13 +18,8 @@ class Category extends Model implements HasMedia
     protected $fillable = [
         'name',
         'description',
+        'content',
         'image',
-    ];
-
-    protected $fillable = [
-        'name',
-        'image',
-        'description'
     ];
 
     function Products()
@@ -30,9 +27,11 @@ class Category extends Model implements HasMedia
         return $this->hasMany(Product::class);
     }
 
-
-    function Types()
+    public function registerMediaConversions(Media $media = null): void
     {
-        return $this->hasMany(Type::class);
+        $this->addMediaConversion('thumb')
+              ->width(80)
+              ->height(50)
+              ->sharpen(10);
     }
 }

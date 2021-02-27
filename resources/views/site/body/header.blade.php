@@ -13,20 +13,13 @@
                 </li>
                 <li class="nav-item ">
                     <div class="dropdown">
-                        <a href="{{route('categories')}}" class="nav-link"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="/categories" class="nav-link"  id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
                          Services
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            {{-- @foreach ($categories as $cat) --}}
-                            <a class="dropdown-item text-white" href="#">Drive Technology</a>
-                            <a class="dropdown-item text-white" href="#">Building Technology</a>
-                            <a class="dropdown-item text-white" href="#">Industrial Automation</a>
-                            <a class="dropdown-item text-white" href="#">SoftWare</a>
-                            <a class="dropdown-item text-white" href="#">Cyber Security</a>
-                            <a class="dropdown-item text-white" href="#">Training</a>
-                            <a class="dropdown-item text-white" href="#">Power System</a>
-                            <a class="dropdown-item text-white" href="#">Solar</a>
-                            {{-- @endforeach --}}
+                            @foreach ($categories as $category)
+                              <a class="dropdown-item text-white" href="/categories/{{ $category->id }}">{{ $category->name }}</a>
+                            @endforeach
                         </div>
                       </div>
 
@@ -86,7 +79,7 @@
                    <a class="nav-link scroll" href="#services">About Us</a>
                 </li>
                 <li class="nav-item">
-                   <a class="nav-link scroll" href="#services">Services</a>
+                   <a class="nav-link scroll" href="/categories">Services</a>
                 </li>
                 {{-- <li class="nav-item">
                    <a class="nav-link scroll" href="#team">Team</a>

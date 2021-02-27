@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
+
 
 
 class Product extends Model implements HasMedia
@@ -16,7 +18,8 @@ class Product extends Model implements HasMedia
         'category_id',
         'title',
         'image',
-        'description'
+        'description',
+        'content',
     ];
 
     function Categories()
@@ -24,6 +27,12 @@ class Product extends Model implements HasMedia
         $this->belongsTo(Category::class);
     }
 
-    
+    public function registerMediaConversions(Media $media = null): void
+    {
+        $this->addMediaConversion('thumb')
+              ->width(80)
+              ->height(50)
+              ->sharpen(10);
+    }
 
 }

@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProductController;
+use App\Models\Category;
 use Illuminate\Support\Facades\DB;
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,8 @@ use Illuminate\Support\Facades\DB;
 */
 
 Route::get('/', function () {
-    // $categories = Category::all();
-    return view('welcome');
+     $categories = Category::all();
+    return view('welcome')->with('categories',$categories);
 });
 
 
@@ -26,10 +27,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-// category Routes
-Route::get('categories',[CategoryController::class , 'index'])->name('categories');
-
-Route::get('category/{category}',[CategoryController::class , 'show'])->name('category');
 
 // Product Route
 Route::get('product/{product}',[ProductController::class,'show'])->name('product');
@@ -39,19 +36,21 @@ Route::view('p','AdminPanel.profile.my_profile');
 Route::get('/logout',[Controller::class , 'logout'])->name('logout');
 
 //Category Routes
-Route::get('/admin/categories',[CategoryController::class,'adminIndex']);
-Route::get('/categories/create',[CategoryController::class,'create']);
-Route::post('/categories',[CategoryController::class,'store']);
-Route::get('/categories/edit/{category}',[CategoryController::class,'edit']);
-Route::put('/categories/{category}',[CategoryController::class,'update']);
-Route::delete('/categories/{category}',[CategoryController::class,'destroy']);
+Route::get('/categories',[CategoryController::class , 'index'])->name('categories');
+Route::get('/categories/create',[CategoryController::class,'create'])->middleware('auth:sanctum');
+Route::get('/categories/{category}',[CategoryController::class , 'show'])->name('category');
+Route::get('/admin/categories',[CategoryController::class,'adminIndex'])->middleware('auth:sanctum');
+Route::post('/categories',[CategoryController::class,'store'])->middleware('auth:sanctum');
+Route::get('/categories/edit/{category}',[CategoryController::class,'edit'])->middleware('auth:sanctum');
+Route::put('/categories/{category}',[CategoryController::class,'update'])->middleware('auth:sanctum');
+Route::delete('/categories/{category}',[CategoryController::class,'destroy'])->middleware('auth:sanctum');
 
 
 //Product Routes
-Route::get('/admin/products',[ProductController::class,'adminIndex']);
-Route::get('/products/create',[ProductController::class,'create']);
-Route::post('/products',[ProductController::class,'store']);
-Route::get('/products/edit/{product}',[ProductController::class,'edit']);
-Route::put('/products/{product}',[ProductController::class,'update']);
-Route::delete('/products/{product}',[ProductController::class,'destroy']);
+Route::get('/admin/products',[ProductController::class,'adminIndex'])->middleware('auth:sanctum');
+Route::get('/products/create',[ProductController::class,'create'])->middleware('auth:sanctum');
+Route::post('/products',[ProductController::class,'store'])->middleware('auth:sanctum');
+Route::get('/products/edit/{product}',[ProductController::class,'edit'])->middleware('auth:sanctum');
+Route::put('/products/{product}',[ProductController::class,'update'])->middleware('auth:sanctum');
+Route::delete('/products/{product}',[ProductController::class,'destroy'])->middleware('auth:sanctum');
 

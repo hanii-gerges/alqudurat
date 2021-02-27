@@ -17,8 +17,9 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('category_id');
             $table->string('title');
-            $table->longText('description');
-            $table->string('image');
+            $table->longText('description')->nullable();
+            $table->longText('content')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');

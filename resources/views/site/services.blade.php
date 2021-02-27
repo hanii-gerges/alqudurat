@@ -7,7 +7,11 @@
         @foreach ($categories as $cat)
         <div class="col-md-4">
             <div class="card border border-dark" style="width: 18rem;">
-                <img src="{{asset('front-end\classic-business\categories\building-technology.jpg')}}" class="card-img-top" alt="...">
+               @if($cat->getFirstMedia())
+                  <img src="{{ $cat->getFirstMedia()->getUrl() }}" alt="Category Image">
+               @else
+                  <img src="{{asset('front-end\classic-business\categories\building-technology.jpg')}}" class="card-img-top" alt="...">
+               @endif
                 <div class="card-body">
                   <h5 class="card-title text-center">{{$cat->name}}</h5>
                  <center>

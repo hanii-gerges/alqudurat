@@ -44,7 +44,8 @@
                     <tr>
                         <th scope="row">{{ $product->id }}</th>
                         @if($product->getMedia()->first())
-                            <td>{{ $product->getMedia()->first() }}</td>
+{{-- //////////////////////////////////////////make sure .env APP_URL is empty////////////////////////////////////////////// --}}
+                            <td><img src="{{ $product->getFirstMedia()->getUrl('thumb') }}"></td>
                         @else
                             <td></td>
                         @endif
@@ -55,7 +56,7 @@
                             <form action="/products/{{ $product->id }}" method="POST">
                                 @csrf
                                 @method('delete')
-                                <input type="submit" class="btn btn-danger" value="Delete">
+                                <input type="submit" class="btn btn-danger" id="delete-btn" value="Delete">
                             </form>
                         </td>
                     </tr>

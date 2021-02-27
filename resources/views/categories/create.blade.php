@@ -3,7 +3,7 @@
 @section('content')
 <div>
     <div>
-        <form action="/categories" method="post">
+        <form action="/categories" method="post" enctype="multipart/form-data">
             @csrf
             @if (count($errors)>0)
                 @foreach($errors->all() as $error)
@@ -18,13 +18,19 @@
                 <input type="text" class="form-control col-10" name="name" placeholder="Category Name">
             </div>
             <div class="form-group row">
-                <label class="col-2" for="description">Category Content: </label>
+                <label class="col-2" for="description">Category Description: </label>
                 <div class="col-10">
-                    <textarea class="form-control col-10" id="ckeditor" name="description" cols="30" rows="10" placeholder="Category Content"></textarea>
+                    <textarea class="form-control col-10" id="ckeditorDescription" name="description" cols="30" rows="10" placeholder="Category Description"></textarea>
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-2" for="image">Image: </label>
+                <label class="col-2" for="content">Category Content: </label>
+                <div class="col-10">
+                    <textarea class="form-control col-10" id="ckeditorContent" name="content" cols="30" rows="10" placeholder="Category Content"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2" for="image">Category Image: </label>
                 <input class="form-control-file col-10" type="file">
             </div>
             <div class="row justify-content-end">

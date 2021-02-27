@@ -36,13 +36,13 @@ class ProductController extends Controller
         $request->validate([
             'category_id' => 'required',
             'title' => 'required',
-            'description' => 'required',
         ]);
 
         $product = Product::create([
             'category_id' => $request->category_id,
             'title' => $request->title,
             'description' => $request->description,
+            'content' => $request->content,
         ]);
 
         if(request('image')){
@@ -62,7 +62,8 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('site.product.show' , compact('product'));
+        $categories = Category::all();
+        return view('site.product.show' , compact('product','categories'));
     }
 
     /**
@@ -90,11 +91,15 @@ class ProductController extends Controller
         $request->validate([
             'category_id' => 'required',
             'title' => 'required',
-            'description' => 'required',
         ]);
 
         $product->update($request->all());
+        
         if(request('image')){
+            if($product->getFirstMedia())
+            {
+                $product->getFirstMedia()->delete();
+            }
             $product->addMediaFromRequest('image')->toMediaCollection();
         }
         return redirect('/admin/products')->with('success','product updated');

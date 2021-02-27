@@ -25,7 +25,7 @@
  
 
     <div>
-        <form action="/categories/{{ $category->id }}" method="post">
+        <form action="/categories/{{ $category->id }}" method="post" enctype="multipart/form-data">
             @csrf
             @method('put')
             <div class="form-group row">
@@ -33,13 +33,19 @@
                 <input type="text" class="form-control col-10" name="name" placeholder="Category Name" value="{{ $category->name }}">
             </div>
             <div class="form-group row">
-                <label class="col-2" for="description">Category Content: </label>
+                <label class="col-2" for="description">Category Description: </label>
                 <div class="col-10">
-                <textarea class="form-control col-10" id="ckeditor" name="description" cols="30" rows="10" placeholder="Category Content">{{ $category->description }}</textarea>
+                    <textarea class="form-control col-10" id="ckeditorDescription" name="description" cols="30" rows="10" placeholder="Category Description">{{ $category->description }}</textarea>
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-2" for="image">Image: </label>
+                <label class="col-2" for="content">Category Content: </label>
+                <div class="col-10">
+                    <textarea class="form-control col-10" id="ckeditorContent" name="content" cols="30" rows="10" placeholder="Category Content">{{ $category->content }}</textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2" for="image">Category Image: </label>
                 <input class="form-control-file col-10" type="file" name="image">
             </div>
             <div class="row justify-content-end">

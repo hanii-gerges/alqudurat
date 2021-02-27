@@ -7,11 +7,7 @@
       <!-- search form -->
       <div class="search-form d-none d-lg-inline-block">
         <div class="input-group">
-          <button type="button" name="search" id="search-btn" class="btn btn-flat">
-            <i class="mdi mdi-magnify"></i>
-          </button>
-          <input type="text" name="query" id="search-input" class="form-control" placeholder="'button', 'chart' etc."
-            autofocus autocomplete="off" />
+          
         </div>
         <div id="search-results-container">
           <ul id="search-results"></ul>
@@ -24,37 +20,19 @@
           <!-- User Account -->
           <li class="dropdown user-menu">
             <button href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <img src="{{asset('back-end/assets/img/user/user.png')}}" class="user-image" alt="User Image" />
-              <span class="d-none d-lg-inline-block">Abdus Salam</span>
+              <img src="{{asset('back-end/assets/img/user/user.jpg')}}" class="user-image" alt="User Image" />
+              <span class="d-none d-lg-inline-block">{{ auth()->user()->name }}</span>
             </button>
             <ul class="dropdown-menu dropdown-menu-right">
               <!-- User image -->
               <li class="dropdown-header">
-                <img src="{{asset('back-end/assets/img/user/user.png')}}" class="img-circle" alt="User Image" />
+                <img src="{{asset('back-end/assets/img/user/user.jpg')}}" class="img-circle" alt="User Image" />
                 <div class="d-inline-block">
-                  Abdus Salam <small class="pt-1">abdus@gmail.com</small>
+                  {{ auth()->user()->name }} <small class="pt-1">{{ auth()->user()->email }}</small>
                 </div>
               </li>
 
-              <li>
-                <a href="profile.html">
-                  <i class="mdi mdi-account"></i> My Profile
-                </a>
-              </li>
-
-              <li>
-                <a href="#">
-                    <i class="fa fa-key">
-                        </i> Change Password
-                </a>
-              </li>
-
-              <li>
-                <a href="email-inbox.html">
-                  <i class="mdi mdi-email"></i> Message
-                </a>
-              </li>
-
+              
               <li class="dropdown-footer">
                 <a href="{{route('logout')}}"> <i class="mdi mdi-logout"></i> Log Out </a>
               </li>

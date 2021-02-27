@@ -31,131 +31,13 @@
 
 
 
-            <li  class="has-sub active expand" >
-              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#dashboard"
-                aria-expanded="false" aria-controls="dashboard">
-                <i class="mdi mdi-view-dashboard-outline"></i>
-                <span class="nav-text">Dashboard</span> <b class="caret"></b>
-              </a>
-              <ul  class="collapse show"  id="dashboard"
-                data-parent="#sidebar-menu">
-                <div class="sub-menu">
-
-
-
-                      <li  class="active" >
-                        <a class="sidenav-item-link" href="index.html">
-                          <span class="nav-text">Create Slider</span>
-
-                        </a>
-                      </li>
-
-
-
-
-
-
-                      <li >
-                        <a class="sidenav-item-link" href="analytics.html">
-                          <span class="nav-text">View All Sliders</span>
-
-                          <span class="badge badge-danger">5</span>
-
-                        </a>
-                      </li>
-
-
-
-
-                </div>
-              </ul>
-            </li>
-
-
-
-
-
-            <li  class="has-sub" >
-              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#ui-elements"
-                aria-expanded="false" aria-controls="ui-elements">
-                <i class="mdi mdi-folder-multiple-outline"></i>
-                <span class="nav-text">About Us</span> <b class="caret"></b>
-              </a>
-              <ul  class="collapse"  id="ui-elements"
-                data-parent="#sidebar-menu">
-                <div class="sub-menu">
-
-
-                  <li  class="has-sub" >
-                    <a class="sidenav-item-link" href="javascript:void(0)">
-                      <span class="nav-text">Create about us</span>
-                    </a>
-
-                  </li>
-
-                  <li  class="has-sub" >
-                    <a class="sidenav-item-link" href="javascript:void(0)">
-                      <span class="nav-text">Show about us</span>
-
-                      <span class="badge badge-warning">1</span>
-                    </a>
-
-                  </li>
-
-
-
-
-
-
-
-                </div>
-              </ul>
-            </li>
-
-
-
-
-
-            <li  class="has-sub" >
-              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#services"
-                aria-expanded="false" aria-controls="services">
-                <i class="fab fa-servicestack"></i>
-                <span class="nav-text">Services</span> <b class="caret"></b>
-              </a>
-              <ul  class="collapse"  id="services"
-              data-parent="#sidebar-menu">
-              <div class="sub-menu">
-
-                <li >
-                    <a class="sidenav-item-link" href="#">
-                      <span class="nav-text">Create Serivce</span>
-
-                    </a>
-                  </li>
-
-                  <li >
-                    <a class="sidenav-item-link" href="#">
-                      <span class="nav-text">Show All Services</span>
-
-                      <span class="badge badge-primary">5</span>
-
-                    </a>
-                  </li>
-
-              </div>
-              </ul>
-
-            </li>
-
-
-
-
+            
 
             <li  class="has-sub" >
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#categories"
                 aria-expanded="false" aria-controls="categories">
                 <i class="mdi mdi-image-filter-none"></i>
-                <span class="nav-text">Categories</span> <b class="caret"></b>
+                <span class="nav-text">Services</span> <b class="caret"></b>
               </a>
               <ul  class="collapse"  id="categories"
                 data-parent="#sidebar-menu">
@@ -166,14 +48,14 @@
                   
                   <li >
                     <a class="sidenav-item-link" href="/admin/categories">
-                      <span class="nav-text">View Categories</span>
+                      <span class="nav-text">View Services</span>
                       
                     </a>
                   </li>
 
                   <li >
                     <a class="sidenav-item-link" href="/categories/create">
-                      <span class="nav-text">Create Category</span>
+                      <span class="nav-text">Create Service</span>
 
                     </a>
                   </li>
@@ -218,38 +100,6 @@
 
 
 
-
-
-            <li  class="has-sub" >
-              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#Portfolio"
-                aria-expanded="false" aria-controls="Portfolio">
-                <i class="fas fa-briefcase"></i>
-                <span class="nav-text">Portfolio</span> <b class="caret"></b>
-              </a>
-              <ul  class="collapse"  id="Portfolio"
-                data-parent="#sidebar-menu">
-                <div class="sub-menu">
-                      <li>
-                        <a class="sidenav-item-link" href="rtl.html">
-                          <span class="nav-text">Add Protfolio</span>
-
-                        </a>
-                      </li>
-
-                      <li>
-                        <a class="sidenav-item-link" href="rtl.html">
-                          <span class="nav-text">View Protfolios</span>
-
-                          <span class="badge badge-info">5</span>
-                        </a>
-                      </li>
-
-
-
-
-                </div>
-              </ul>
-            </li>
 
             
 

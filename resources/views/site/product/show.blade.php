@@ -5,15 +5,26 @@
 <div class="container">
     <div class="row" style="margin-top:150px;margin-bottom:50px;">
         <div class="col-md-6">
-            <img src="{{asset('front-end\classic-business\categories\building-technology.jpg')}}" alt="Category Image">
+            @if($product->getFirstMedia())
+            <img src="{{ $product->getFirstMedia()->getUrl() }}" alt="Product Image">
+          @else
+            <img src="{{asset('front-end\classic-business\categories\building-technology.jpg')}}" alt="Product Image">
+          @endif
         </div>
         <div class="col-md-6">
-            <h2>{{$product->title}}</h2>
-            <p class="text-justify">{{$product->description}}</p>
+            <h2 class="text-left">{{$product->title}}</h2>
+            <p class="text-left">{!! $product->description !!}</p>
         </div>
     </div>
     <hr class="border border-secondary">
 
+    @if($product->content !== null)
+    <div class="row">
+      <div class="col">
+        {!! $product->content !!}
+      </div>
+    </div>
+@endif
 {{-- @foreach ($product as $x)
 <div class="col-md-4">
     <div class="card border border-dark" style="width: 18rem;">

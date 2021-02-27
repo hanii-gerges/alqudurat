@@ -43,7 +43,12 @@
                     
                     <tr>
                         <th scope="row">{{ $category->id }}</th>
-                        <td>{{ $category->image }}</td>
+                        @if($category->getMedia()->first())
+{{-- //////////////////////////////////////////make sure .env APP_URL is empty////////////////////////////////////////////// --}}
+                            <td><img src="{{ $category->getFirstMedia()->getUrl('thumb') }}"></td>
+                        @else
+                            <td></td>
+                        @endif                        
                         <td>{{ $category->name }}</td>
                         <td>{{ $category->description }}</td>
                         <td>
@@ -51,7 +56,7 @@
                             <form action="/categories/{{ $category->id }}" method="POST">
                                 @csrf
                                 @method('delete')
-                                <input type="submit" class="btn btn-danger" value="Delete">
+                                <input type="submit" class="btn btn-danger" id="delete-btn" value="Delete">
                             </form>
                         </td>
                     </tr>
