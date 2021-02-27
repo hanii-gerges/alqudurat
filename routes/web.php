@@ -3,9 +3,11 @@
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\ProductController;
-use App\Models\Category;
+use App\Http\Controllers\MessageController;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\App;
+use App\Models\Category;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,9 +20,15 @@ use Illuminate\Support\Facades\DB;
 */
 
 Route::get('/', function () {
-     $categories = Category::all();
-    return view('welcome')->with('categories',$categories);
-});
+    $status = 0;
+    $language_type = 'default';
+    $categories = Category::all();
+    return view('welcome',compact('status','language_type','categories'));
+})->name('welcome');
+
+// Language Route
+//Route::get('lang/{lang}',[Controller::class ,'language'])->name('lang');
+
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -53,4 +61,10 @@ Route::post('/products',[ProductController::class,'store'])->middleware('auth:sa
 Route::get('/products/edit/{product}',[ProductController::class,'edit'])->middleware('auth:sanctum');
 Route::put('/products/{product}',[ProductController::class,'update'])->middleware('auth:sanctum');
 Route::delete('/products/{product}',[ProductController::class,'destroy'])->middleware('auth:sanctum');
+
+//message route
+Route::post('send/message',[MessageController::class,'store'])->name('message.store');
+
+
+
 

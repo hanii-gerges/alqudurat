@@ -29,17 +29,17 @@
             <div class="form-group row">
                 <label class="col-2" for="description">Product Description: </label>
                 <div class="col-10">
-                    <textarea class="form-control col-10" id="ckeditorDescription" name="description" cols="30" rows="10" placeholder="Category Description">{{ $product->description }}</textarea>
+                    <textarea class="form-control col-10" id="ckeditorDescription" name="description" cols="30" rows="10" placeholder="Category Description"></textarea>
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-2" for="content">Product Content: </label>
                 <div class="col-10">
-                    <textarea class="form-control col-10" id="ckeditorContent" name="content" cols="30" rows="10" placeholder="Category Content">{{ $product->content }}</textarea>
+                    <textarea class="form-control col-10" id="ckeditorContent" name="content" cols="30" rows="10" placeholder="Category Content"></textarea>
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-2" for="image">Image: </label>
+                <label class="col-2" for="image">Product Image: </label>
                 <input class="form-control-file col-10" type="file" name="image">
             </div>
             <div class="row justify-content-end">

@@ -31,7 +31,7 @@
             </div>
             <div class="form-group row">
                 <label class="col-2" for="image">Category Image: </label>
-                <input class="form-control-file col-10" type="file">
+                <input class="form-control-file col-10" type="file" name="image">
             </div>
             <div class="row justify-content-end">
                 <input class="btn btn-primary" type="submit" value="Submit">

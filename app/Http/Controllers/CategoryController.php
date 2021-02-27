@@ -7,20 +7,35 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use PhpParser\Node\Stmt\TryCatch;
 use Illuminate\Support\Facades\DB;
+use App\Models\Type;
+use Illuminate\Support\Facades\App;
 
 class CategoryController extends Controller
 {
     public function index()
     {
+        // $lang = App::currentLocale();
+        // if($lang == 'arabic')
+        // {
+        // $status = 1;
+        // $language_type = 'arabic';
+        // }else
+        // {
+        // $status = 0;
+        // $language_type = 'english';
+        // }
         $categories = Category::all();
-        return view('site.services' , compact('categories'));
+        // $categories = DB::table('categories')->get();
+        // $status = 0;
+        // $language_type = 'default';
+        return view('site.categories.index' , compact('categories'));
     }
 
     public function show(Category $category)
     {
         $categories = Category::all();
         $products = Product::where('category_id',$category->id)->get();
-        return view('site.show',compact('category','products','categories'));
+        return view('site.categories.show',compact('category','products','categories'));
     }
 
 
@@ -44,8 +59,7 @@ class CategoryController extends Controller
         $category = Category::create($request->all());
 
         if(request('image')){
-            $category->addMediaFromRequest('image')->toMediaCollection();
-        }
+            $category->addMediaFromRequest('image')->toMediaCollection();        }
 
         return redirect('/admin/categories')->with('success','category created');
     }

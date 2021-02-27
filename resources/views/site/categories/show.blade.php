@@ -71,7 +71,7 @@
 
 </div>
 
-@else
+@elseif($photo == 0)
 <div class="row mb-5">
     @foreach ($products as $product)
     <div class="col-6">
@@ -84,6 +84,8 @@
     </div>
     @endforeach
 </div>
+
+@else
 
 
 @endif

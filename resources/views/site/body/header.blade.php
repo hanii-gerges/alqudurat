@@ -1,7 +1,12 @@
 <div class="navigation-bar">
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top navbar-fixed-top">
        <div class="container">
-          <a class="navbar-brand" href="#">
+           {{-- @if ($status == 1)
+           <a href="{{route('lang','en')}}" class="text-white">English</a>
+           @else
+           <a href="{{route('lang','arabic')}}" class="text-white">العربية</a>
+           @endif --}}
+          <a class="navbar-brand" href="/">
           <img src="{{asset('front-end/classic-business/img/logo.png')}}" alt="image"></a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
              <ul class="navbar-nav ml-auto">
@@ -23,23 +28,17 @@
                         </div>
                       </div>
 
-                   {{-- <a class="nav-link" href="{{route('categories')}}">Services</a> --}}
-                </li>
-                {{-- <li class="nav-item">
-                   <a class="nav-link" href="#team">Team</a>
-                </li> --}}
-                <li class="nav-item">
-                   <a class="nav-link" href="#work">Work</a>
-                </li>
-                {{-- <li class="nav-item">
-                   <a class="nav-link" href="#pricing">Pricing</a>
-                </li> --}}
-                {{-- <li class="nav-item">
-                   <a class="nav-link" href="#blog">Blog</a>
-                </li> --}}
-                <li class="nav-item">
-                   <a class="nav-link" href="#contact">Contact</a>
-                </li>
+
+                    {{-- <a class="nav-link" href="{{route('categories')}}">Services</a> --}}
+                 </li>
+
+                 <li class="nav-item">
+                    <a class="nav-link" href="#brand">Brands</a>
+                 </li>
+
+                 <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                 </li>
              </ul>
           </div>
           <div class="social-icons">
@@ -72,24 +71,24 @@
           <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
           <nav class="side-nav w-100">
              <ul class="navbar-nav">
-                <li class="nav-item">
-                   <a class="nav-link scroll" href="#home">Home</a>
+                <li class="nav-item active">
+                   <a class="nav-link" href="/#home">Home</a>
                 </li>
-                <li class="nav-item">
-                   <a class="nav-link scroll" href="#services">About Us</a>
+                <li class="nav-item ">
+                   <a class="nav-link" href="/#about">About</a>
                 </li>
                 <li class="nav-item">
                    <a class="nav-link scroll" href="/categories">Services</a>
                 </li>
-                {{-- <li class="nav-item">
-                   <a class="nav-link scroll" href="#team">Team</a>
-                </li>--}}
-               <li class="nav-item">
-                   <a class="nav-link scroll" href="#work">Work</a>
-                </li>
+
                 <li class="nav-item">
-                   <a class="nav-link scroll" href="#contact">Contact</a>
+                   <a class="nav-link" href="/#brand">Brands</a>
                 </li>
+
+                <li class="nav-item">
+                   <a class="nav-link" href="/#contact">Contact</a>
+                </li>
+
              </ul>
           </nav>
           <div class="side-menu-footer">
