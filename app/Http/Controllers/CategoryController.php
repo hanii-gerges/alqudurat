@@ -7,7 +7,7 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Type;
-
+use Illuminate\Support\Facades\App;
 
 class CategoryController extends Controller
 {
@@ -18,8 +18,21 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = DB::table('categories')->get();
-        return view('site.services' , compact('categories'));
+        // $lang = App::currentLocale();
+        // if($lang == 'arabic')
+        // {
+        // $status = 1;
+        // $language_type = 'arabic';
+        // }else
+        // {
+        // $status = 0;
+        // $language_type = 'english';
+        // }
+        $categories = Category::all();
+        // $categories = DB::table('categories')->get();
+        // $status = 0;
+        // $language_type = 'default';
+        return view('site.categories.index' , compact('categories'));
     }
 
     /**
@@ -63,7 +76,10 @@ class CategoryController extends Controller
                 $photo = 1;
             }
         }
-        return view('site.show',compact('category','products','photo'));
+        // $status = 0;
+        // $language_type = 'default';
+        $categories = DB::table('categories')->get();
+        return view('site.categories.show',compact('category','products','photo','categories'));
     }
 
     /**

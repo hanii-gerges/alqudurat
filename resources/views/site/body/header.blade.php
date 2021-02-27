@@ -1,52 +1,44 @@
 <div class="navigation-bar">
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top navbar-fixed-top">
        <div class="container">
+           {{-- @if ($status == 1)
+           <a href="{{route('lang','en')}}" class="text-white">English</a>
+           @else
+           <a href="{{route('lang','arabic')}}" class="text-white">العربية</a>
+           @endif --}}
           <a class="navbar-brand" href="#">
           <img src="{{asset('front-end/classic-business/img/logo.png')}}" alt="image"></a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                   <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item ">
-                   <a class="nav-link" href="#services">About Us</a>
-                </li>
-                <li class="nav-item ">
-                    <div class="dropdown">
-                        <a href="{{route('categories')}}" class="nav-link"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                         Services
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            {{-- @foreach ($categories as $cat) --}}
-                            <a class="dropdown-item text-white" href="#">Drive Technology</a>
-                            <a class="dropdown-item text-white" href="#">Building Technology</a>
-                            <a class="dropdown-item text-white" href="#">Industrial Automation</a>
-                            <a class="dropdown-item text-white" href="#">SoftWare</a>
-                            <a class="dropdown-item text-white" href="#">Cyber Security</a>
-                            <a class="dropdown-item text-white" href="#">Training</a>
-                            <a class="dropdown-item text-white" href="#">Power System</a>
-                            <a class="dropdown-item text-white" href="#">Solar</a>
-                            {{-- @endforeach --}}
-                        </div>
-                      </div>
+                 <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home</a>
+                 </li>
+                 <li class="nav-item ">
+                    <a class="nav-link" href="#about">About</a>
+                 </li>
+                 <li class="nav-item ">
+                     <div class="dropdown">
+                         <a href="{{route('categories')}}" class="nav-link"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          {{__('message.services')}}
+                         </a>
+                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                             @foreach ($categories as $cat)
+                             <a class="dropdown-item text-white" href="{{route('category',$cat->id)}}">{{$cat->name}}</a>
 
-                   {{-- <a class="nav-link" href="{{route('categories')}}">Services</a> --}}
-                </li>
-                {{-- <li class="nav-item">
-                   <a class="nav-link" href="#team">Team</a>
-                </li> --}}
-                <li class="nav-item">
-                   <a class="nav-link" href="#work">Work</a>
-                </li>
-                {{-- <li class="nav-item">
-                   <a class="nav-link" href="#pricing">Pricing</a>
-                </li> --}}
-                {{-- <li class="nav-item">
-                   <a class="nav-link" href="#blog">Blog</a>
-                </li> --}}
-                <li class="nav-item">
-                   <a class="nav-link" href="#contact">Contact</a>
-                </li>
+                             @endforeach
+                         </div>
+                       </div>
+
+                    {{-- <a class="nav-link" href="{{route('categories')}}">Services</a> --}}
+                 </li>
+
+                 <li class="nav-item">
+                    <a class="nav-link" href="#brand">Brands</a>
+                 </li>
+
+                 <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                 </li>
              </ul>
           </div>
           <div class="social-icons">
@@ -79,24 +71,35 @@
           <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
           <nav class="side-nav w-100">
              <ul class="navbar-nav">
+                <li class="nav-item active">
+                   <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item ">
+                   <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item ">
+                    <div class="dropdown">
+                        <a href="{{route('categories')}}" class="nav-link"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         {{__('message.services')}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            @foreach ($categories as $cat)
+                             <a class="dropdown-item text-white" href="{{route('category',$cat->id)}}">{{$cat->name}}</a>
+                             @endforeach
+                        </div>
+                      </div>
+
+                   {{-- <a class="nav-link" href="{{route('categories')}}">Services</a> --}}
+                </li>
+
                 <li class="nav-item">
-                   <a class="nav-link scroll" href="#home">Home</a>
+                   <a class="nav-link" href="#brand">Brands</a>
                 </li>
+
                 <li class="nav-item">
-                   <a class="nav-link scroll" href="#services">About Us</a>
+                   <a class="nav-link" href="#contact">Contact</a>
                 </li>
-                <li class="nav-item">
-                   <a class="nav-link scroll" href="#services">Services</a>
-                </li>
-                {{-- <li class="nav-item">
-                   <a class="nav-link scroll" href="#team">Team</a>
-                </li>--}}
-               <li class="nav-item">
-                   <a class="nav-link scroll" href="#work">Work</a>
-                </li>
-                <li class="nav-item">
-                   <a class="nav-link scroll" href="#contact">Contact</a>
-                </li>
+
              </ul>
           </nav>
           <div class="side-menu-footer">

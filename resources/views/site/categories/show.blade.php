@@ -29,7 +29,7 @@
                <h5 class="card-title text-center">{{$product->title}}</h5>
               <center>
                  <div class="cube-button">
-                     <a class="btn button btn-rounded btn-light-blue btn-hvr-light-blue" href="{{route('product',$pro->id)}}">
+                     <a class="btn button btn-rounded btn-light-blue btn-hvr-light-blue" href="{{route('product',$product->id)}}">
                         Learn
                         More
                         <div class="btn-hvr-setting">
@@ -52,7 +52,7 @@
 
 </div>
 
-@else
+@elseif($photo == 0)
 <div class="row mb-5">
     @foreach ($products as $product)
     <div class="col-6">
@@ -65,6 +65,8 @@
     </div>
     @endforeach
 </div>
+
+@else
 
 
 @endif
