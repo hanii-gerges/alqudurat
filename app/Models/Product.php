@@ -22,9 +22,9 @@ class Product extends Model implements HasMedia
         'content',
     ];
 
-    function Categories()
+    function category()
     {
-        $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class);
     }
 
     public function registerMediaConversions(Media $media = null): void

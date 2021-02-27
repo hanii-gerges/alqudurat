@@ -2,7 +2,15 @@
 
 @section('content')
 <div class="container">
-    <div class="row" style="margin-top:150px;margin-bottom:50px;">
+  <div class="row" style="margin-top:150px;margin-bottom:50px;">
+      <nav class="col-12" aria-label="breadcrumb">
+        <ol class="breadcrumb text-center text-lg-right">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/categories">Services</a></li>
+            <li class="breadcrumb-item" aria-current="page"><a href="/categories/{{ $category->id }}">{{ $category->name }}</a></li>
+            {{--  <li class="breadcrumb-item"><a href=""></a></li>  --}}
+        </ol>
+    </nav>
 
         <div class="col-md-6">
           @if($category->getFirstMedia())
