@@ -3,16 +3,20 @@
 @section('content')
 
 <div class="container">
-    <div class="row" style="margin-top:150px;margin-bottom:50px;">
-      <nav class="col-12" aria-label="breadcrumb">
-        <ol class="breadcrumb text-center text-lg-right">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item"><a href="/categories">Services</a></li>
-            <li class="breadcrumb-item"><a href="/categories/{{ $product->category->id }}">{{ $product->category->name }}</a></li>
-            <li class="breadcrumb-item"><a href="/product/{{ $product->id }}">{{ $product->title }}</a></li>
-        </ol>
-    </nav>
-        <div class="col-md-6">
+  <div class="row">
+    <ol class="breadcrumb text-center text-lg-right" style="margin-top:100px;">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/categories">Products & Services</a></li>
+        <li class="breadcrumb-item"><a href="/categories/{{ $product->category->id }}">{{ $product->category->name }}</a></li>
+        <li class="breadcrumb-item"><a href="/product/{{ $product->id }}">{{ $product->title }}</a></li>
+    </ol>
+  </div>
+    <div class="row" style="margin-bottom:70px;">
+      <div class="col-12 mb-3" style="padding-left:0px;">
+        <h2 class="text-left">{{$product->title}}</h2>
+      </div>
+  
+        <div class="col-md-6" style="padding-left:0%;">
             @if($product->getFirstMedia())
             <img src="{{ $product->getFirstMedia()->getUrl() }}" alt="Product Image">
           @else
@@ -20,11 +24,9 @@
           @endif
         </div>
         <div class="col-md-6">
-            <h2 class="text-left">{{$product->title}}</h2>
             <p class="text-left">{!! $product->description !!}</p>
         </div>
     </div>
-    <hr class="border border-secondary">
 
     @if($product->content !== null)
     <div class="row">

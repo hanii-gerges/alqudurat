@@ -1,3 +1,4 @@
+//0A2125
 <div class="navigation-bar">
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top navbar-fixed-top">
        <div class="container">
@@ -11,15 +12,15 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
              <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                   <a class="nav-link" href="#home">Home</a>
+                   <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item ">
-                   <a class="nav-link" href="#services">About Us</a>
+                   <a class="nav-link" href="/about">About</a>
                 </li>
                 <li class="nav-item ">
                     <div class="dropdown">
                         <a href="/categories" class="nav-link"  id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
-                         Services
+                         Products & Services
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             @foreach ($categories as $category)
@@ -33,15 +34,15 @@
                  </li>
 
                  <li class="nav-item">
-                    <a class="nav-link" href="#brand">Brands</a>
+                    <a class="nav-link" href="/#brand">Brands</a>
                  </li>
 
                  <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="/contact">Contact Us</a>
                  </li>
              </ul>
           </div>
-          <div class="social-icons">
+          {{--  <div class="social-icons">
              <ul >
                 <li><a class="facebook-hovr" href="">
                    <i class="fab fa-facebook-f"></i></a>
@@ -53,7 +54,7 @@
                    <i class="fab fab fa-instagram"></i></a>
                 </li>
              </ul>
-          </div>
+          </div>  --}}
        </div>
        <!-- Container End -->
        <a href="javascript:void(0)" class="sidemenu_btn link" id="sidemenu_toggle">
@@ -66,7 +67,7 @@
     <div class="side-menu hidden">
        <div class="inner-wrapper">
           <div class="image">
-             <img src="{{asset('front-end/classic-business/img/side-menu.png')}}" alt="image">
+             <img src="{{asset('front-end/classic-business/img/logo.png')}}" alt="image">
           </div>
           <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
           <nav class="side-nav w-100">
@@ -78,7 +79,7 @@
                    <a class="nav-link" href="/#about">About</a>
                 </li>
                 <li class="nav-item">
-                   <a class="nav-link scroll" href="/categories">Services</a>
+                   <a class="nav-link scroll" href="/categories">Products & Services</a>
                 </li>
 
                 <li class="nav-item">
@@ -86,7 +87,7 @@
                 </li>
 
                 <li class="nav-item">
-                   <a class="nav-link" href="/#contact">Contact</a>
+                   <a class="nav-link" href="/contact">Contact Us</a>
                 </li>
 
              </ul>
@@ -102,7 +103,6 @@
                    <li><a href="#" class="hover"><i class="fab fa-instagram"></i></a></li>
                 </ul>
              </div>
-             <p class="copywrite text-left">&#169; 2020  Made with love by Digital Tips Company</p>
           </div>
        </div>
     </div>

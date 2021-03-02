@@ -105,7 +105,7 @@
 <script src="{{asset('back-end/assets/js/date-range.js')}}"></script>
 <script src="{{asset('back-end/assets/js/map.js')}}"></script>
 <script src="{{asset('back-end/assets/js/custom.js')}}"></script>
-<script src="//cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+<script src="//cdn.ckeditor.com/4.16.0/full/ckeditor.js"></script>
 <script>
   CKEDITOR.replace('ckeditorDescription');
   CKEDITOR.replace('ckeditorContent');

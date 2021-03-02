@@ -5,9 +5,9 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <!-- Page Title -->
-      <title>Siemens Company</title>
+      <title>{{ config('app.name','laravel') }}</title>
       <!-- Favicon -->
-      <link rel="icon" href="{{asset('front-end/classic-business/img/favicon.png')}}">
+      <link rel="icon" href="{{asset('front-end/classic-business/img/logoicon.png')}}">
       <!-- Bundle -->
       <link rel="stylesheet" href="{{asset('front-end/vendor/css/bundle.min.css')}}">
       <!-- Plugin Css -->
@@ -49,8 +49,15 @@
 
 
       <!-- FOOTER START -->
-      <footer class="no-gutters">
+      <footer class="no-gutters" style="padding-top:30px; padding-bottom: 20px;">
          <div class="container">
+            <div class="row justify-content-center mb-5">
+               <div class="col col-lg-2 text-center"><a class="fword rounded-pill" href="/">Home</a></div>
+               <div class="col col-lg-2 text-center"><a class="fword rounded-pill" href="/about">About Us</a></div>
+               <div class="col col-lg-2 text-center"><a class="" href="/categories"><span class="rounded-pill">Products & Services</span></a></div>
+               <div class="col col-lg-2 text-center"><a class="fword rounded-pill" href="/#brand">Brands</a></div>
+               <div class="col col-lg-2 text-center"><a class="fword rounded-pill" href="/#contact">Contact</a></div>
+            </div>
             <div class="footer-social-icons wow fadeInDown" data-wow-delay="300ms">
                <ul >
                   <li><a class="facebook-hovr" href="">
@@ -73,7 +80,6 @@
                   </li>
                </ul>
             </div>
-            <p class="wow fadeInDown" data-wow-delay="300ms">© 2020 Made with love by Digital Tips Company</p>
          </div>
       </footer>
 

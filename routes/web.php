@@ -20,12 +20,19 @@ use App\Models\Category;
 */
 
 Route::get('/', function () {
-    $status = 0;
-    $language_type = 'default';
     $categories = Category::all();
-    return view('welcome',compact('status','language_type','categories'));
+    return view('welcome',compact('categories'));
 })->name('welcome');
 
+Route::get('/about', function(){
+    $categories = Category::all();
+    return view('about',compact('categories'));
+});
+
+Route::get('/contact', function(){
+    $categories = Category::all();
+    return view('contact',compact('categories'));
+});
 // Language Route
 //Route::get('lang/{lang}',[Controller::class ,'language'])->name('lang');
 

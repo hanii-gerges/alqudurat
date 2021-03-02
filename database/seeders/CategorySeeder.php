@@ -16,7 +16,7 @@ class CategorySeeder extends Seeder
     {
         Category::create([
             'name' => 'Drive technology',
-            'description' => '',
+            'description' => '<p>A comprehensive portfolio of reliable frequency converters, motors, couplings and gearboxes for almost every industry and field of application satisfies the highest performance standards and quality requirements. New interfaces and modules ensure drive components are ready for digitalization. The components are perfectly coordinated and can be used both as a standard system and as a customized solution to meet your individual needs.</p>',
         ]);
 
         Category::create([

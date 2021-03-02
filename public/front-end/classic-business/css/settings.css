@@ -1116,7 +1116,7 @@ img.tp-slider-alternative-image	{
 
 
 
-.tparrows						{	cursor:pointer; background:#18191d; background:rgba(0,0,0,0.5); width:40px;height:40px;position:absolute; display:block; z-index:1000; }
+.tparrows						{	cursor:pointer; background:#18191d; background:rgba(0,0,0,0.5); width:40px;height:40px;position:absolute; display:block; }
 .tparrows:hover 				{	background:#18191d; transition: .6s ease;}
 .tparrows:before				{	font-family: "revicons"; font-size:15px; color:#fff; display:block; line-height: 40px; text-align: center;}
 .tparrows.tp-leftarrow:before	{	content: '\EA44'; font-family: LineIcons }

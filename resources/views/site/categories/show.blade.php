@@ -2,17 +2,20 @@
 
 @section('content')
 <div class="container">
-  <div class="row" style="margin-top:150px;margin-bottom:50px;">
-      <nav class="col-12" aria-label="breadcrumb">
-        <ol class="breadcrumb text-center text-lg-right">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item"><a href="/categories">Services</a></li>
-            <li class="breadcrumb-item" aria-current="page"><a href="/categories/{{ $category->id }}">{{ $category->name }}</a></li>
-            {{--  <li class="breadcrumb-item"><a href=""></a></li>  --}}
-        </ol>
-    </nav>
+  <div class="row">
+  <ol class="breadcrumb text-center text-lg-right" style="margin-top:100px;">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/categories">Products & Services</a></li>
+      <li class="breadcrumb-item" aria-current="page"><a href="/categories/{{ $category->id }}">{{ $category->name }}</a></li>
+      {{--  <li class="breadcrumb-item"><a href=""></a></li>  --}}
+  </ol>
+  </div>
+  <div class="row" style="margin-bottom:70px;">
+    <div class="col-12 mb-3" style="padding-left:0px;">
+      <h2 class="text-left">{{$category->name}}</h2>
+    </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6" style="padding-left:0%;">
           @if($category->getFirstMedia())
             <img src="{{ $category->getFirstMedia()->getUrl() }}" alt="Category Image">
           @else
@@ -22,29 +25,27 @@
         </div>
 
         <div class="col-md-6">
-            <h2 class="text-left">{{$category->name}}</h2>
             <p class="text-left">{!! $category->description !!}</p>
 
         </div>
 
     </div>
-    <hr class="border border-secondary">
 
 @if($category->content !== null)
-    <div class="row">
-      <div class="col">
+    <div class="row mx-auto w-75">
+      <div class="col cybercontent">
         {!! $category->content !!}
       </div>
     </div>
 @endif
 @if($products->count() > 0)
     @if ($products->first()->getMedia()->first())
-    <div class="row">
+    <div class="row mt-5 justify-content-center">
     @foreach ($products as $product)
-     <div class="col-md-4">
-         <div class="card border border-dark" style="width: 18rem;">
-             {{ $product->getMedia()->first() }}
-             <div class="card-body">
+     <div class="col-md-6 col-xl-4">
+         <div class="card  " style="width: 23rem;" style="border-radius:0%;">
+          <img src="{{ $product->getFirstMedia()->getUrl() }}" alt="Product Image" style="height: 220px; max-heigt:220px;">
+          <div class="card-body" style="padding: 5px; background-color: #EBF0F5">
                <h5 class="card-title text-center">{{$product->title}}</h5>
               <center>
                  <div class="cube-button">
@@ -71,7 +72,7 @@
 
 </div>
 
-@elseif($photo == 0)
+@else
 <div class="row mb-5">
     @foreach ($products as $product)
     <div class="col-6">
@@ -85,13 +86,10 @@
     @endforeach
 </div>
 
-@else
 
 
 @endif
 @endif
-
-
 
 </div>
 
