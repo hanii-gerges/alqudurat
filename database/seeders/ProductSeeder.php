@@ -167,117 +167,102 @@ class ProductSeeder extends Seeder
             'description' => '',
         ]);
 
-        Product::create([
-            'category_id' => 3,
-            'title' => 'Industry Software',
-            'description' => '<p><strong>digitalize and integrate the entire industrial value chain</strong></p> <p>Industry Software from helps manufacturers become Digital Enterprises by enabling them to digitalize and integrate their entire industrial value chain through PLM solutions, Manufacturing Operations Management (MOM) solutions, and TIA equipment &ndash; all supported by Teamcenter, the industry-leading Collaboration Platform and single data backbone. The integration of PLM, MOM and Automation is made possible with the comprehensive suite of Industry Software.</p>',
-        ]);
-
+        
         Product::create([
             'category_id' => 3,
             'title' => 'Operator control and monitoring systems',
             'description' => '',
-        ]);
-
-        Product::create([
-            'category_id' => 3,
-            'title' => 'PC-based automation',
+            ]);
+            
+            Product::create([
+                'category_id' => 3,
+                'title' => 'PC-based automation',
+                'description' => '',
+                ]);
+                
+                Product::create([
+                    'category_id' => 3,
+                    'title' => 'Power supplies',
+                    'description' => '',
+                    ]);
+                    
+                    Product::create([
+                        'category_id' => 3,
+                        'title' => 'Process analytics',
             'description' => '',
         ]);
-
-        Product::create([
-            'category_id' => 3,
-            'title' => 'Power supplies',
-            'description' => '',
-        ]);
-
-        Product::create([
-            'category_id' => 3,
-            'title' => 'Process analytics',
-            'description' => '',
-        ]);
-
+        
         Product::create([
             'category_id' => 3,
             'title' => 'Process control system',
             'description' => '',
-        ]);
-
-        Product::create([
+            ]);
+            
+            Product::create([
             'category_id' => 3,
             'title' => 'Process instrumentation',
             'description' => '',
-        ]);
+            ]);
 
-        Product::create([
+            Product::create([
             'category_id' => 3,
             'title' => 'Products for specific requirements',
             'description' => '',
-        ]);
+            ]);
+            
+            //Software
+            
+            Product::create([
+                'category_id' => 4,
+                'title' => 'Industry Software',
+                'description' => '<p><strong>digitalize and integrate the entire industrial value chain</strong></p> <p>Industry Software from helps manufacturers become Digital Enterprises by enabling them to digitalize and integrate their entire industrial value chain through PLM solutions, Manufacturing Operations Management (MOM) solutions, and TIA equipment &ndash; all supported by Teamcenter, the industry-leading Collaboration Platform and single data backbone. The integration of PLM, MOM and Automation is made possible with the comprehensive suite of Industry Software.</p>',
+            ]);
 
-        //Software
-        Product::create([
-            'category_id' => 4,
-            'title' => 'Industry Software',
-            'description' => '',
-        ]);
-
-        Product::create([
+            Product::create([
             'category_id' => 4,
             'title' => 'MindSphere®',
             'description' => '<p>MindSphere<strong>&reg;</strong>&nbsp;is the leading industrial IoT as a service solution that uses advanced analytics and AI to power IoT solutions from the edge to the cloud.</p>',
-        ]);
+            ]);
 
-        Product::create([
+            Product::create([
             'category_id' => 4,
             'title' => 'Mobile Apps',
-            'description' => '',
-            'content' => '<p><strong>Here you&#39;ll find a selection of mobile apps for your tablet or smartphone:</strong></p>
+            'description' => '<p><strong>Here you&#39;ll find a selection of mobile apps for your tablet or smartphone</strong></p>',
+            'content' => '<p>&nbsp;</p>
 
-            <ul>
-                <li><strong>Industry Online Support</strong></li>
-            </ul>
+            <h4><strong>Industry Online Support</strong></h4>
             
-            <p>With the Industry Online Support App you have access to more than 300,000 documents about all the Siemens Industry products - any time and anywhere, whether you have problems during the implementation of a project, need help for troubleshooting, want to expand your system or plan a new plant.</p>
-            
-            <p><strong>Designed for:&nbsp;</strong>iPhone, iPad, Android</p>
+            <p>With the Industry Online Support App you have access to more than 300,000 documents about all the Siemens Industry products - any time and anywhere, whether you have problems during the implementation of a project, need help for troubleshooting, want to expand your system or plan a new plant.<br />
+            <br />
+            <span style="font-size:14px"><strong>Designed for</strong>:&nbsp;iPhone, iPad, Android</span></p>
             
             <p>&nbsp;</p>
             
-            <ul>
-                <li><strong>SIMOTICS Digital Data</strong></li>
-            </ul>
+            <h4><strong>SIMOTICS Digital Data</strong></h4>
             
             <p>With the SIMOTICS Digital Data App - no matter where you are - you always have access to technical data, spare parts and the operating instructions for your SIMOTICS GP/SD motors. This means that we can provide you with an important part of the Digital Twin, allowing you to simplify and optimize your processes. You can obtain the electrical and mechanical data by simply scanning the data matrix code on the motor.</p>
             
-            <p>Designed for: iPhone, iPad, Android, Windows Phone</p>
+            <p><span style="font-size:14px"><strong>Designed for</strong>: iPhone, iPad, Android, Windows Phone</span></p>
             
             <p>&nbsp;</p>
             
-            <ul>
-                <li><strong>SINAMICS SELECTOR</strong></li>
-            </ul>
+            <h4><strong>SINAMICS SELECTOR</strong></h4>
             
             <p>Siemens has developed the SINAMICS SELECTOR App as a practical tool for finding article numbers for your SINAMICS inverters in the output range from 0.12 kW to 560 kW (0.16 hp up to 700hp) quickly and easily. Whether for SINAMICS V20, SINAMICS G120C, SINAMICS G120P or SINAMICS G120: the app will provide you with the correct article numbers conveniently.</p>
             
-            <p><strong>Designed for:</strong>&nbsp;iPhone, iPad, Android</p>
+            <p><span style="font-size:14px"><strong>Designed for:</strong>&nbsp;iPhone, iPad, Android</span></p>
             
             <p>&nbsp;</p>
             
-            <ul>
-                <li><strong>Combi Valve Sizer</strong></li>
-            </ul>
+            <h4><strong>Combi Valve Sizer</strong></h4>
             
             <p>Valve and actuator selection and sizing</p>
             
             <p>Using the Combi Valve Sizer app from Siemens, it is very easy to select the right Acvatix combi valve and matching actuator. This way, the design of energy-efficient HVAC plants becomes very straightforward: Enter or get calculated the required maximum volumetric flow, select other features such as type of threaded connection, PN class or DN size &ndash; and the ideal type of combi valve will be displayed.</p>
             
-            <p><br />
-            &nbsp;</p>
+            <p>&nbsp;</p>
             
-            <ul>
-                <li><strong>HomeControl for Room automation</strong></li>
-            </ul>
+            <h4><strong>HomeControl for Room automation</strong></h4>
             
             <p>Simple control of HVAC, light, shading</p>
             
@@ -285,13 +270,7 @@ class ProductSeeder extends Seeder
             
             <p>.</p>
             
-            <p>&nbsp;</p>
-            
-            <p>&nbsp;</p>
-            
-            <ul>
-                <li><strong>Scan to HIT</strong></li>
-            </ul>
+            <h4><strong>Scan to HIT</strong></h4>
             
             <p>Get product information via QR</p>
             
@@ -305,9 +284,7 @@ class ProductSeeder extends Seeder
             
             <p>&nbsp;</p>
             
-            <ul>
-                <li><strong>Desigo CC</strong></li>
-            </ul>
+            <h4><strong>Desigo CC</strong></h4>
             
             <p>Remote access to building automation and alarm management</p>
             
@@ -315,22 +292,17 @@ class ProductSeeder extends Seeder
             
             <p>&nbsp;</p>
             
-            <ul>
-                <li><strong>ABT Go</strong></li>
-            </ul>
+            <h4><strong>ABT Go</strong></h4>
             
             <p>ABT Go is the mobile tool for commissioning and maintenance tasks of Siemens devices used in building automation and control systems.</p>
             
             <p>&nbsp;</p>
             
-            <ul>
-                <li><strong>SIMATIC Mobile Apps</strong></li>
-            </ul>
+            <h4><strong>SIMATIC Mobile Apps</strong></h4>
             
             <p>From the monitoring of distributed, mobile or expansive plants, all the way to digital maintenance tools for machines &ndash; the SIMATIC Mobile Apps can assist the user with a wide range of tasks in numerous industrial sectors. As well as providing secure access to the plant visualization, they also facilitate commissioning and maintenance tasks on site.</p>
             
-            <p><br />
-            &nbsp;</p>
+            <p>&nbsp;</p>
             ',
         ]);
 

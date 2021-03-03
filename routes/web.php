@@ -70,7 +70,10 @@ Route::put('/products/{product}',[ProductController::class,'update'])->middlewar
 Route::delete('/products/{product}',[ProductController::class,'destroy'])->middleware('auth:sanctum');
 
 //message route
-Route::post('send/message',[MessageController::class,'store'])->name('message.store');
+Route::get('/messages',[MessageController::class,'index'])->middleware('auth:sanctum');
+Route::get('/messages/{message}',[MessageController::class,'show'])->middleware('auth:sanctum');
+Route::post('/send/message',[MessageController::class,'store'])->name('message.store');
+Route::delete('/messages/{message}',[MessageController::class,'destroy'])->middleware('auth:sanctum');
 
 
 

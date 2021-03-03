@@ -10,20 +10,33 @@ class MessageController extends Controller
 
     function store(Request $request)
     {
-    //     return 'Jafer';
-    //     $validaitonData = $request->validate([
-    //         'name' => 'required',
-    //         'email' => 'required|email',
-    //         'message' => 'required'
-    //     ],
-    // [
-    //     'email.email' => 'you should write input formate'
-    // ]);
-    Message::insert([
-        'name' => $request->userName,
-        'email' => $request->userEmail,
-        'message' => $request->userMessage,
-    ]);
-        return redirect()->route('welcome')->with('success','Send message has been successfully');
+        $request->validate([
+                'name' => 'required',
+                'email' => 'required|email',
+                'message' => 'required'
+            ]);
+        Message::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'message' => $request->message,
+        ]);
+        return redirect('/contact')->with('success','Message Sent');
+    }
+
+    function index()
+    {
+        $messages = Message::orderBy('created_at','asc')->paginate(20);
+        return view('messages.index')->with('messages',$messages);
+    }
+
+    function show(Message $message)
+    {
+        return view('messages.show')->with('message',$message);
+    }
+
+    function destroy(Message $message)
+    {
+        $message->delete();
+        return redirect('/messages')->with('success','Message Deleted');
     }
 }

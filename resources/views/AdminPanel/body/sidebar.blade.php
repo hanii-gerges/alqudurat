@@ -98,13 +98,12 @@
             </li>
 
 
-
-
-
-            
-
-        </ul>
-
+            <li  class="has-sub" >
+              <a class="sidenav-item-link" href="/messages">
+                <i class="mdi mdi-image-filter-none"></i>
+                <span class="nav-text">Messages</span> <b class="caret"></b>
+              </a>
+              
       </div>
 
       <hr class="separator" />

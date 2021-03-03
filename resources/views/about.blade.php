@@ -17,8 +17,8 @@
            <div class="col-12" style="height: 300px;"><img src="{{asset('/front-end/classic-business/about/about us.jpeg')}}" class="border border-secondery rounded" alt="About image"></div>
 
        </div>
-       <div class="container">
-        <div class="row mx-auto w-75">
+       <div class="container justify-content-center">
+        <div class="row mx-lg-5 mobile">
                 <div class="col-12 mb-5"><h1 class="wow fadeInDown" style="font-weight: bold" data-wow-delay="300ms" >About AlQudrat </h1></div>
             <div class="col-lg-12" data-wow-delay="300ms">
                <div class="content">

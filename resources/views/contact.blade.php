@@ -6,12 +6,28 @@
   <div class="container">
      <div class="row">
         <div class="col-lg-8 col-md-12 col-sm-12 wow fadeInLeft" data-wow-delay="300ms">
-           <h2>Let's Get In Touch</h2>
-           @if (Session::has('success'))
-           <div class="alert alert-primary" role="alert">
-              {{Session('success')}}
-            </div>
-           @endif
+           <h2>Let&#39;s Get In Touch</h2>
+      @if (count($errors)>0)
+    @foreach($errors->all() as $error)
+        <div class="alert alert-danger">
+            {{$error}}
+        </div>
+    @endforeach
+@endif
+
+@if (session('success'))
+    <div class="alert alert-success">
+        {{session('success')}}
+    </div>
+@endif
+
+@if (session('error'))
+    <div class="alert alert-danger">
+        {{session('error')}}
+    </div>
+@endif
+  
+
            <form action="{{route('message.store')}}" method="POST" class="contact-form">
               @csrf
               <div class="row">
@@ -19,19 +35,19 @@
                  <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="form-group">
                        <label>Name</label>
-                       <input class="form-control" type="text" placeholder="Your Name" required=""  name="userName">
+                       <input class="form-control" type="text" placeholder="Your Name" required  name="name">
                     </div>
                  </div>
                  <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="form-group">
                        <label >Email</label>
-                       <input class="form-control" type="email" placeholder="email@website.com" required=""  name="userEmail">
+                       <input class="form-control" type="email" placeholder="email@website.com" required  name="email">
                     </div>
                  </div>
                  <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="form-group">
                        <label>Message</label>
-                       <textarea class="form-control" placeholder="Write your message here"  name="userMessage" rows="6" cols="50"></textarea>
+                       <textarea class="form-control" placeholder="Write your message here"  name="message" rows="6" cols="50" required></textarea>
                     </div>
                  </div>
                   <button class="btn btn-outline-info btn-rounded" type="submit">Send</button>

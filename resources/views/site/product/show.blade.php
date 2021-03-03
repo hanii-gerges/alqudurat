@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-  <div class="row">
+  <div class="row mx-auto">
     <ol class="breadcrumb text-center text-lg-right" style="margin-top:100px;">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
         <li class="breadcrumb-item"><a href="/categories">Products & Services</a></li>
@@ -11,7 +11,7 @@
         <li class="breadcrumb-item"><a href="/product/{{ $product->id }}">{{ $product->title }}</a></li>
     </ol>
   </div>
-    <div class="row" style="margin-bottom:70px;">
+    <div class="row mx-auto" style="margin-bottom:70px;">
       <div class="col-12 mb-3" style="padding-left:0px;">
         <h2 class="text-left">{{$product->title}}</h2>
       </div>
