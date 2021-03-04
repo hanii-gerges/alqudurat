@@ -44,7 +44,7 @@
     @foreach ($products as $product)
      <div class="col-md-6 col-xl-4">
          <div class="card  " style="width: 23rem;" style="border-radius:0%;">
-          <a href="{{route('product',$product->id)}}"><img src="{{ $product->getFirstMedia()->getUrl() }}" alt="Product Image" style="height: 220px; max-heigt:220px;"></a>
+          <img src="{{ $product->getFirstMedia()->getUrl() }}" alt="Product Image" style="height: 220px; max-heigt:220px;">
           <div class="card-body" style="padding: 5px; background-color: #EBF0F5">
                <h5 class="card-title text-center">{{$product->title}}</h5>
               <center>
