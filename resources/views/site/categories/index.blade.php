@@ -2,16 +2,16 @@
 
 @section('content')
 <div class="container">
-   <div class="row">
+   <div class="row" style="padding-left: 15px;">
    <ol class="breadcrumb text-center text-lg-right" style="margin-top:100px;">
        <li class="breadcrumb-item"><a href="/">Home</a></li>
        <li class="breadcrumb-item"><a href="/categories">Products & Services</a></li>
    </ol>
 </div>
     <div class="row" style="margin-bottom:50px;">
-       <h1 class="col-12 mb-5" style="padding-left:0%;">Products & Services</h1>
+       <h1 class="col-12 mb-5">Products & Services</h1>
         @foreach ($categories as $cat)
-        <div class="col-md-6 col-xl-4" style="padding-left:0%;">
+        <div class="col-md-6 col-xl-4">
             <div class="card  " style="width: 23rem; border-radius:0%;">
                @if($cat->getFirstMedia())
                   <img src="{{ $cat->getFirstMedia()->getUrl() }}" alt="Category Image" style="height: 220px; max-height: 220px; overflow:hidden;">

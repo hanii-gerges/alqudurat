@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-  <div class="row">
+  <div class="row" style="padding-left: 15px;">
   <ol class="breadcrumb text-center text-lg-right" style="margin-top:100px;">
       <li class="breadcrumb-item"><a href="/">Home</a></li>
       <li class="breadcrumb-item"><a href="/categories">Products & Services</a></li>
@@ -11,11 +11,11 @@
   </ol>
   </div>
   <div class="row" style="margin-bottom:70px;">
-    <div class="col-12 mb-3" style="padding-left:0px;">
+    <div class="col-12 mb-3">
       <h2 class="text-left">{{$category->name}}</h2>
     </div>
 
-        <div class="col-md-6" style="padding-left:0%;">
+        <div class="col-md-6">
           @if($category->getFirstMedia())
             <img src="{{ $category->getFirstMedia()->getUrl() }}" alt="Category Image">
           @else
@@ -75,7 +75,7 @@
 @else
 <div class="row mb-5">
     @foreach ($products as $product)
-    <div class="col-6">
+    <div class="col-12 col-md-6">
               <div class="card  " style="background:#EBF0F5; border-radius: 0%">
                 {{-- <img src="{{asset('front-end\classic-business\categories\building-technology.jpg')}}" class="card-img-top" alt="..."> --}}
                 <div class="card-body">
