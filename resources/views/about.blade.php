@@ -14,7 +14,7 @@
 <!-- About Us START -->
 <div class="services-section" id="about">
        <div class="row">
-           <div class="col-12" style="height: 300px;"><img src="{{asset('/front-end/classic-business/about/about us.jpeg')}}" class="border border-secondery rounded" alt="About image"></div>
+           <div class="col-12 mb-4"><img src="{{asset('/front-end/classic-business/about/about us.jpeg')}}" class="border border-secondery rounded" alt="About image"></div>
 
        </div>
        <div class="container justify-content-center">
