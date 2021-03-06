@@ -96,10 +96,10 @@
              <div class="banner-icons">
                 <ul>
                    <li>
-                      <a href="#" class="hover"><i class="fab fa-facebook-f"></i></a>
+                      <a target="_blank" href="https://www.facebook.com/AlQudurat-For-Digital-Industrial-Services-109436721206059" class="hover"><i class="fab fa-facebook-f"></i></a>
                    </li>
                    <li><a href="#" class="hover"><i class="fab fa-twitter"></i></a></li>
-                   <li><a href="#" class="hover"><i class="fab fa-linkedin-in"></i></a></li>
+                   <li><a target="_blank" href="https://www.linkedin.com/company/71681104/admin/" class="hover"><i class="fab fa-linkedin-in"></i></a></li>
                    <li><a href="#" class="hover"><i class="fab fa-instagram"></i></a></li>
                 </ul>
              </div>
