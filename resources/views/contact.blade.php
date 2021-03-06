@@ -59,7 +59,7 @@
               <i class="fas fa-map-marker-alt"></i>
               <div class="media-body">
                  <h5>OUR ADDRESS</h5>
-                 <p>1234 Heaven Stress, Beverly Hill.</p>
+                 <p>Jordan , Amman</p>
               </div>
            </div>
            <div class="media">
@@ -73,8 +73,7 @@
               <i class="far fa-envelope"></i>
               <div class="media-body">
                  <h5>EMAIL ADDRESS</h5>
-                 <p>Email: email@website.com</p>
-                 <p>Support: support@website.com</p>
+                 <p>Email: info@alqudurat.com</p>
               </div>
            </div>
         </div>

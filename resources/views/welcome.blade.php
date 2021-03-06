@@ -87,7 +87,7 @@
                  </div>
               </div>
               <div class=" item">
-                 <img src="{{asset('front-end/classic-business/brands/Meico.webp')}}" style="margin: 0 auto; width:250px;height:200px" alt="image">
+                 <img src="{{asset('front-end/classic-business/brands/meico.jpg')}}" style="margin: 0 auto; width:250px;height:200px" alt="image">
                  <div class="team-detail">
                     <h5>MEICO</h5>
                  </div>

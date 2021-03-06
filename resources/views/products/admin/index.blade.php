@@ -50,7 +50,7 @@
                             <td></td>
                         @endif
                         <td>{{ $product->title }}</td>
-                        <td>{{ $product->description }}</td>
+                        <td style="display:block;height: 100px;overflow-y: hidden ;text-overflow: ellipsis;">{{ $product->description }}</td>
                         <td>
                             <a href="/products/edit/{{ $product->id }}"><button class="btn btn-info">update</button></a>
                             <form action="/products/{{ $product->id }}" method="POST">

@@ -2,19 +2,11 @@
 
 @section('content')
 
-<!--SLIDER START-->
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="..." alt="First slide">
-      </div>
-    </div>
-  </div>
 
 <!-- About Us START -->
-<div class="services-section" id="about">
+<div class="services-section mt-4" id="about">
        <div class="row">
-           <div class="col-12 mb-4"><img src="{{asset('/front-end/classic-business/about/about us.jpeg')}}" class="border border-secondery rounded" alt="About image"></div>
+           <div class="col-12 mb-4"><img src="{{asset('/front-end/classic-business/about/about us.jpeg')}}" alt="About image"></div>
 
        </div>
        <div class="container justify-content-center">

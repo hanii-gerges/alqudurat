@@ -25,7 +25,7 @@ class MessageController extends Controller
 
     function index()
     {
-        $messages = Message::orderBy('created_at','asc')->paginate(20);
+        $messages = Message::orderBy('created_at','desc')->paginate(20);
         return view('messages.index')->with('messages',$messages);
     }
 

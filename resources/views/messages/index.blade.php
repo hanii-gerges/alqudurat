@@ -45,7 +45,7 @@
                         <th scope="row">{{ $message->id }}</th>
                         <td>{{ $message->name }}</td>
                         <td>{{ $message->email }}</td>
-                        <td>{{ $message->message }}</td>
+                        <td style="display:block;height: 100px;overflow-y: hidden ;text-overflow: ellipsis;">{{ $message->message }}</td>
                         <td>
                             <a href="/messages/{{ $message->id }}"><input type="button" class="btn btn-primary" id="show" value="Show"></a>
                             <form action="/messages/{{ $message->id }}" method="POST">

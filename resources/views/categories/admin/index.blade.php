@@ -27,7 +27,7 @@
      </div>
 
     <div class="col-12">
-        <table class="table">
+        <table  class="table">
             
             <thead>
               <tr>
@@ -50,7 +50,7 @@
                             <td></td>
                         @endif                        
                         <td>{{ $category->name }}</td>
-                        <td>{{ $category->description }}</td>
+                        <td style="display:block;height: 100px;overflow-y: hidden ;text-overflow: ellipsis;">{{ $category->description }}</td>
                         <td>
                             <a href="/categories/edit/{{ $category->id }}"><button class="btn btn-info">update</button></a>
                             <form action="/categories/{{ $category->id }}" method="POST">
