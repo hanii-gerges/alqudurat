@@ -15,28 +15,54 @@ class CategorySeeder extends Seeder
     public function run()
     {
         Category::create([
+            'name' => 'Solar Systems',
+            'description' => '<p>The solar system is method were it uses the sun energy and convert it into power energy to supply all electrical needs, it is one of the types of the renewable energy because it is clean and environment friendly, no fumes or hazardous gases going into the air.</p> <p>Solar system is used independently to power a certain load without the interference of any other source of power (during the day) and need a storage for the supply during the night such as batteries.</p> <p>The Solar system to power any certain load also can be coupled to the grid to supply the extra generated power or to feed the load with the shortage during the 24 hours.</p> <p>It will reduce the electricity bill almost to zero if utilized properly.</p>',
+        ]);
+
+        Category::create([
+            'name' => 'Power systems',
+            'description' => '',
+        ]);
+        
+        Category::create([
             'name' => 'Drive technology',
-            'description' => '<p>A comprehensive portfolio of reliable frequency converters, motors, couplings and gearboxes for almost every industry and field of application satisfies the highest performance standards and quality requirements. New interfaces and modules ensure drive components are ready for digitalization. The components are perfectly coordinated and can be used both as a standard system and as a customized solution to meet your individual needs.</p>',
+            'description' => '<h3>Creating environments that care</h3>
+
+            <p>As a trusted advisor and reliable partner, as a system integrator, service provider and a product vendor, we offer&nbsp;energy-efficient, safe and secure buildings and infrastructure. With our people, our global footprint, our decades of experience and our technical expertise, it&#39;s our passion helping you to create the perfect place &ndash; your perfect place.</p>
+            ',
         ]);
 
         Category::create([
             'name' => 'Building technology',
-            'description' => '<h3>Creating environments that care</h3> <p>As a trusted advisor and reliable partner, as a system integrator, service provider and a product vendor, Siemens offers energy-efficient, safe and secure buildings and infrastructure. With our people, our global footprint, our decades of experience and our technical expertise, it&#39;s our passion helping you to create the perfect place &ndash; your perfect place.</p>',
+            'description' => '<h3>Creating environments that care</h3>
+
+            <p>As a trusted advisor and reliable partner, as a system integrator, service provider and a product vendor, we offer&nbsp;energy-efficient, safe and secure buildings and infrastructure. With our people, our global footprint, our decades of experience and our technical expertise, it&#39;s our passion helping you to create the perfect place &ndash; your perfect place.</p>
+            ',
         ]);
 
         Category::create([
             'name' => 'Industrial automation',
-            'description' => '<h3>Integrated drives and smart controllers and innovative PLM software</h3> <p>The industry is right on the threshold of the fourth industrial revolution. Automation is being followed by the digitalization of production. The goal: an increase of productivity, efficiency, speed, and quality, resulting in higher competitiveness for companies on their way to the future of industry. &nbsp; Here you will find Siemens&rsquo; comprehensive offering for automation technology and the digitalization of production.</p>',
+            'description' => '<h3>Integrated drives and smart controllers and innovative PLM software</h3>
+
+            <p>The industry is right on the threshold of the fourth industrial revolution. Automation is being followed by the digitalization of production. The goal: an increase of productivity, efficiency, speed, and quality, resulting in higher competitiveness for companies on their way to the future of industry. &nbsp; Here you will find Siemens&rsquo; comprehensive offering for automation technology and the digitalization of production.</p>
+            ',
         ]);
 
         Category::create([
             'name' => 'Software',
-            'description' => '<p>Software is an essential driver for the digitalization of societies and industries. It brings the physical and virtual worlds together. Building technology, energy infrastructures or products are planned, developed and thoroughly tested in the virtual sphere before a single screw is turned in the real world. That is possible thanks to simulation with a digital twin, a virtual image of the real installation or product. With such methods e.g. products can reach the market up to 50 percent sooner &ndash; a major competitive advantage for companies.</p> <p><br /> &nbsp;</p>',
+            'description' => '<p>Software is an essential driver for the digitalization of societies and industries. It brings the physical and virtual worlds together. Building technology, energy infrastructures or products are planned, developed and thoroughly tested in the virtual sphere before a single screw is turned in the real world. That is possible thanks to simulation with a digital twin, a virtual image of the real installation or product. With such methods e.g. products can reach the market up to 50 percent sooner &ndash; a major competitive advantage for companies.</p>
+
+            <p><br />
+            &nbsp;</p>
+            ',
         ]);
 
         Category::create([
             'name' => 'Cyber security',
-            'description' => '<h3>Imagine every aspect of your organization, secure for purpose</h3> <p>we can help you toward this vision with a holistic approach to cybersecurity that provides peace of mind through leading operational industry standards.</p>',
+            'description' => '<h3>Imagine every aspect of your organization, secure for purpose</h3>
+
+            <p>we can help you toward this vision with a holistic approach to cybersecurity that provides peace of mind through leading operational industry standards.</p>
+            ',
             'content' => '<h2><strong>PEOPLE</strong></h2>
 
             <h3>Mitigate human risk</h3>
@@ -140,54 +166,57 @@ class CategorySeeder extends Seeder
 
         Category::create([
             'name' => 'Mining',
-            'description' => '<p>Supporting your mining operations, from plant design expertise to equipment, parts and services for every stage of your process.</p> <p>&nbsp;</p>',
-            'content' => '<h3><a href="https://www.mogroup.com/mining/filtration/"><strong>Filtration</strong></a></h3>
+            'description' => '<p>Supporting your mining operations, from plant design expertise to equipment, parts and services for every stage of your process.</p>
+
+            <p>&nbsp;</p>
+            ',
+            'content' => '<h3><strong>Filtration</strong></h3>
 
             <p>More and more mines and minerals processing plants are run around the clock. In these circumstances the mining operators often require material handling equipment that is reliable and needs less maintenance.</p>
             
             <p>&nbsp;</p>
             
-            <h3><a href="https://www.mogroup.com/mining/separation/flotation/"><strong>Flotation</strong></a></h3>
+            <h3><strong>Flotation</strong></h3>
             
             <p>Harness the power of our experience with Outotec flotation plants. With expertise based on over 100 years in flotation technology, and over 10,000 flotation cells installed around the world, Outotec has the experience you need to maximize your operations&rsquo; productivity and efficiency. We can deliver a complete life-cycle solution from test works and flow sheet development to implementation with proprietary and third-party equipment, as well as operation and maintenance services of the flotation plant.</p>
             
             <p>&nbsp;</p>
             
-            <h3><a href="https://www.mogroup.com/mining/grinding/"><strong>Grinding</strong></a></h3>
+            <h3><strong>Grinding</strong></h3>
             
             <p>Every mining operation has a unique grinding process. Metso Outotec has experience of over 8,000 grinding mills globally, including manufacturing and delivering the largest SAG/AG mills in the world.</p>
             
             <p>&nbsp;</p>
             
-            <h3><a href="https://www.mogroup.com/mining/separation/"><strong>Separation</strong></a></h3>
+            <h3><strong>Separation</strong></h3>
             
             <p>&nbsp;A well-functioning separation processis an essential component of improving the profitability of mining operations. With installations in over 100 countries worldwide, Metso Outotec is at the forefront of developing separation technology that offers both maximized recovery and lower operating costs.</p>
             
             <p>&nbsp;</p>
             
-            <h3><a href="https://www.mogroup.com/mining/slurry-handling/"><strong>Slurry handling</strong></a></h3>
+            <h3><strong>Slurry handling</strong></h3>
             
             <p>&nbsp;Slurry handling is vital in maximizing minerals processing plant&rsquo;s productivity and efficiency. It plays a key role in mining processes involving water and other liquids.</p>
             
             <p>&nbsp;</p>
             
-            <h3><a href="https://www.mogroup.com/mining/screening/"><strong>Screening</strong></a></h3>
+            <h3><strong>Screening</strong></h3>
             
             <p>Performance of a comminution circuit greatly depends on reliability and efficiency of screening. Metso Outotec&#39;s mining screens and services ensure that the material going through the process has the desired size, resulting in reduced wastage and improved process efficiency.</p>
             
             <p>&nbsp;</p>
             
-            <h3><a href="https://www.mogroup.com/mining/crushing/"><strong>Crushing</strong></a></h3>
+            <h3><strong>Crushing</strong></h3>
             
             <p>&nbsp;An optimal crushing process reduce the ore to a desired size more efficiently, economically and safely. The high-capacity, reliable and energy efficient crushing solutions deliver superior performance and maximized throughput also for the most demanding mining applications.</p>
             
-            <h3><a href="https://www.mogroup.com/mining/tailings-management/"><strong>Tailings management</strong></a></h3>
+            <h3><strong>Tailings management</strong></h3>
             
             <p>Tailings management in today&rsquo;s perspective is unable to sustain in the future. An effective end of the mine strategy needs a vision that goes beyond environmentally safe practice. At Metso Outotec, our goal is to transform tailings management by changing legacy and risk prone practices with a positive value creation model.</p>
             
             <p>&nbsp;</p>
             
-            <h3><a href="https://www.mogroup.com/mining/material-handling/"><strong>Material handling</strong></a></h3>
+            <h3><strong>Material handling</strong></h3>
             
             <p>More and more mines and minerals processing plants are run around the clock. In these circumstances the mining operators often require material handling equipment that is reliable and needs less maintenance.</p>
             
@@ -197,17 +226,14 @@ class CategorySeeder extends Seeder
 
         Category::create([
             'name' => 'Training',
-            'description' => '<p><strong>Training courses for the Digital Enterprise</strong></p> <p><strong>Start your journey on the path to Industry today</strong></p> <p>Digitalization is already taking hold in many industries, based on the Digital Enterprise Suite , the Digital Twin, and interdisciplinary work on a foundation of standardized data management. Add in advances in automation, and you can see it&rsquo;s vital to stay fully up-to-date and turn new opportunities into new successes. With our courses &ndash; Digital Industry Academy, tailored to your individual training needs.</p>',
+            'description' => '<p><strong>Training courses for the Digital Enterprise</strong></p>
+
+            <p><strong>Start your journey on the path to Industry today</strong></p>
+            
+            <p>Digitalization is already taking hold in many industries, based on the Digital Enterprise Suite , the Digital Twin, and interdisciplinary work on a foundation of standardized data management. Add in advances in automation, and you can see it&rsquo;s vital to stay fully up-to-date and turn new opportunities into new successes. With our courses &ndash; Digital Industry Academy, tailored to your individual training needs.</p>
+            ',
         ]);
 
-        Category::create([
-            'name' => 'Solar Systems',
-            'description' => '<p>The solar system is method were it uses the sun energy and convert it into power energy to supply all electrical needs, it is one of the types of the renewable energy because it is clean and environment friendly, no fumes or hazardous gases going into the air.</p> <p>Solar system is used independently to power a certain load without the interference of any other source of power (during the day) and need a storage for the supply during the night such as batteries.</p> <p>The Solar system to power any certain load also can be coupled to the grid to supply the extra generated power or to feed the load with the shortage during the 24 hours.</p> <p>It will reduce the electricity bill almost to zero if utilized properly.</p>',
-        ]);
-
-        Category::create([
-            'name' => 'Power systems',
-            'description' => '',
-        ]);
+        
     }
 }

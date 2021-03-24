@@ -15,8 +15,17 @@
                    <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item ">
-                   <a class="nav-link" href="/about">About</a>
-                </li>
+                  <div class="dropdown">
+                     <a class="nav-link"  id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+                        The Company
+                     </a>
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                           <a class="dropdown-item" href="/about">Introduction</a>
+                           <a class="dropdown-item" href="/about">Services</a>
+
+                     </div>
+                   </div>
+             </li>
                 <li class="nav-item ">
                     <div class="dropdown">
                         <a href="/categories" class="nav-link"  id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
@@ -24,7 +33,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             @foreach ($categories as $category)
-                              <a class="dropdown-item text-white" href="/categories/{{ $category->id }}">{{ $category->name }}</a>
+                              <a class="dropdown-item" href="/categories/{{ $category->id }}">{{ $category->name }}</a>
                             @endforeach
                         </div>
                       </div>
