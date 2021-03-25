@@ -16,7 +16,7 @@
                 </li>
                 <li class="nav-item ">
                   <div class="dropdown">
-                     <a class="nav-link"  id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+                     <a class="nav-link" href="/intro"  id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
                         The Company
                      </a>
                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -85,7 +85,7 @@
                    <a class="nav-link" href="/#home">Home</a>
                 </li>
                 <li class="nav-item ">
-                   <a class="nav-link" href="/intro">The Company</a>
+                   <a class="nav-link" href="/about">The Company</a>
                 </li>
                 <li class="nav-item">
                    <a class="nav-link scroll" href="/categories">Products & Services</a>

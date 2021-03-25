@@ -34,6 +34,11 @@ Route::get('/services', function(){
     return view('services',compact('categories'));
 });
 
+Route::get('/about', function(){
+    $categories = Category::all();
+    return view('about',compact('categories'));
+});
+
 Route::get('/contact', function(){
     $categories = Category::all();
     return view('contact',compact('categories'));

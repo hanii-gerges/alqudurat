@@ -31,13 +31,7 @@
 
     </div>
 
-@if($category->content !== null)
-    <div class="row mx-auto w-75">
-      <div class="col cybercontent">
-        {!! $category->content !!}
-      </div>
-    </div>
-@endif
+
 @if($products->count() > 0)
     @if ($products->first()->getMedia()->first())
     <div class="row mt-5 justify-content-center">
@@ -91,6 +85,13 @@
 @endif
 @endif
 
+@if($category->content !== null)
+    <div class="row mx-auto w-75">
+      <div class="col cybercontent">
+        {!! $category->content !!}
+      </div>
+    </div>
+@endif
 </div>
 
 @endsection
