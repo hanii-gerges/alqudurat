@@ -19,7 +19,7 @@
           @if($category->getFirstMedia())
             <img src="{{ $category->getFirstMedia()->getUrl() }}" alt="Category Image">
           @else
-            <img src="{{asset('front-end\classic-business\categories\building-technology.jpg')}}" alt="Category Image">
+            {{--  <img src="{{asset('front-end\classic-business\categories\building-technology.jpg')}}" alt="Category Image">  --}}
 
           @endif
         </div>

@@ -54,7 +54,13 @@ class ProductSeeder extends Seeder
         Product::create([
             'category_id' => 3,
             'title' => 'Gear Units',
-            'description' => '',
+            'description' => '<p><strong>the universal gear unit solution</strong></p>
+
+            <p>Our range of industrial gear units is the right solution for your application ,we have the largest number of application-specific solutions and is thus able to meet almost any drive technology requirements in hundreds of industrial applications.<br />
+            Our gear units are valued by our customers due to their high level of availability, their quality and their attractive price-performance ratio.<br />
+            Our selection of universal gear unit designs is perfectly supplemented by a wide range of standard options such as motor bell housings, backstops and taconite seals. For this reason, our portfolio provides a virtually unlimited variety of design options.<br />
+            &nbsp;</p>
+            ',
         ]);
 
         Product::create([
@@ -319,7 +325,23 @@ class ProductSeeder extends Seeder
         ]);
 
         //Cybersecurity
-        
+        Product::create([
+            'category_id' => 7,
+            'title' => 'People',
+            'description' => 'Mitigate human risk',
+        ]);
+
+        Product::create([
+            'category_id' => 7,
+            'title' => 'Process',
+            'description' => 'Fortify processes',
+        ]);
+
+        Product::create([
+            'category_id' => 7,
+            'title' => 'Technology',
+            'description' => 'Secure Technology',
+        ]);
         //Mining
         
         //Training

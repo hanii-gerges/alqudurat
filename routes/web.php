@@ -24,9 +24,14 @@ Route::get('/', function () {
     return view('welcome',compact('categories'));
 })->name('welcome');
 
-Route::get('/about', function(){
+Route::get('/intro', function(){
     $categories = Category::all();
-    return view('about',compact('categories'));
+    return view('intro',compact('categories'));
+});
+
+Route::get('/services', function(){
+    $categories = Category::all();
+    return view('services',compact('categories'));
 });
 
 Route::get('/contact', function(){

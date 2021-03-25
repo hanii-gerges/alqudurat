@@ -20,8 +20,8 @@
                         The Company
                      </a>
                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                           <a class="dropdown-item" href="/about">Introduction</a>
-                           <a class="dropdown-item" href="/about">Services</a>
+                           <a class="dropdown-item" href="/intro">Introduction</a>
+                           <a class="dropdown-item" href="/services">Services</a>
 
                      </div>
                    </div>
@@ -85,7 +85,7 @@
                    <a class="nav-link" href="/#home">Home</a>
                 </li>
                 <li class="nav-item ">
-                   <a class="nav-link" href="/about">About</a>
+                   <a class="nav-link" href="/intro">The Company</a>
                 </li>
                 <li class="nav-item">
                    <a class="nav-link scroll" href="/categories">Products & Services</a>
