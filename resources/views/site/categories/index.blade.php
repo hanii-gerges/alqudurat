@@ -16,7 +16,7 @@
                @if($cat->getFirstMedia())
                   <img src="{{ $cat->getFirstMedia()->getUrl() }}" alt="Category Image" style="height: 220px; max-height: 220px; overflow:hidden;">
                @else
-                  <img src="{{asset('front-end\classic-business\categories\building-technology.jpg')}}" style="height: 220px; max-height: 220px; overflow:hidden;" alt="...">
+                  <img src="{{asset('front-end\classic-business\categories\DefaultCategory.jpeg')}}" style="height: 220px; max-height: 220px; overflow:hidden;" alt="...">
                @endif
                 <div class="card-body" style="padding: 5px; background-color: #EBF0F5">
                   <h5 class="card-title text-center">{{$cat->name}}</h5>

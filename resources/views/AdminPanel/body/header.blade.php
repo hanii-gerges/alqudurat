@@ -31,6 +31,9 @@
                   {{ auth()->user()->name }} <small class="pt-1">{{ auth()->user()->email }}</small>
                 </div>
               </li>
+              {{--  <li class="">
+                <a href="/changePassword">  Change password </a>
+              </li>  --}}
 
               
               <li class="dropdown-footer">

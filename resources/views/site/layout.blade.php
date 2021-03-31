@@ -53,7 +53,7 @@
          <div class="container">
             <div class="row justify-content-center mb-5">
                <div class="col col-lg-2 col-12 text-center"><a class="fword rounded-pill" href="/">Home</a></div>
-               <div class="col col-lg-2 col-12 text-center"><a class="fword rounded-pill" href="/about">About</a></div>
+               <div class="col col-lg-2 col-12 text-center"><a class="fword rounded-pill" href="/intro">The Company</a></div>
                <div class="col col-lg-2 col-12 text-center"><a class="" href="/categories"><span class="rounded-pill">Products & Services</span></a></div>
                <div class="col col-lg-2 col-12 text-center"><a class="fword rounded-pill" href="/#brand">Brands</a></div>
                <div class="col col-lg-2 col-12 text-center"><a class="fword rounded-pill" href="/contact">Contact Us</a></div>

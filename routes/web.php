@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\MessageController;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\App;
 use App\Models\Category;
 /*
@@ -51,6 +52,9 @@ Route::get('/contact', function(){
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::middleware('auth:sanctum')->get('/changePassword',[UserController::class,'edit']);
+Route::middleware('auth:sanctum')->put('/changePassword',[UserController::class,'update']);
 
 
 // Product Route

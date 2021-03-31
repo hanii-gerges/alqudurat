@@ -33,13 +33,17 @@
 
 
 @if($products->count() > 0)
-    @if ($products->first()->getMedia()->first())
     <div class="row mt-5 justify-content-center">
     @foreach ($products as $product)
      <div class="col-md-6 col-xl-4">
-         <div class="card  " style="width: 23rem;" style="border-radius:0%;">
-          <img src="{{ $product->getFirstMedia()->getUrl() }}" alt="Product Image" style="height: 220px; max-heigt:220px;">
+         <div class="card" style="width: 23rem;border-radius:0%; height: 310px">
+          @if($product->getFirstMedia())
+          <img src="{{ $product->getFirstMedia()->getUrl() }}" alt="Category Image" style="height: 220px; max-height: 220px; overflow:hidden;">
+       @else
+          <img src="{{asset('front-end\classic-business\categories\DefaultCategory.jpeg')}}" style="height: 220px; max-height: 220px; overflow:hidden;" alt="...">
+       @endif
           <div class="card-body" style="padding: 5px; background-color: #EBF0F5">
+               @if($product->description != '')
                <h5 class="card-title text-center">{{$product->title}}</h5>
               <center>
                  <div class="cube-button">
@@ -57,37 +61,23 @@
                      </a>
                   </div>
              </center>
+             @else
+             <h5 class="card-title text-center my-3">{{$product->title}}</h5>
+             @endif
+
              </div>
            </div><br>
 
      </div>
 
-    @endforeach
-
+@endforeach
 </div>
 
-@else
-<div class="row mb-5">
-    @foreach ($products as $product)
-    <div class="col-12 col-md-6">
-              <div class="card  " style="background:#EBF0F5; border-radius: 0%">
-                {{-- <img src="{{asset('front-end\classic-business\categories\building-technology.jpg')}}" class="card-img-top" alt="..."> --}}
-                <div class="card-body">
-                  <h5 class="card-title text-center">{{$product->title}}</h5>
-                </div>
-              </div><br>
-    </div>
-    @endforeach
-</div>
-
-
-
-@endif
 @endif
 
 @if($category->content !== null)
-    <div class="row mx-auto w-75">
-      <div class="col cybercontent">
+    <div class="row justify-content-center">
+      <div class="col col-md-8 cybercontent">
         {!! $category->content !!}
       </div>
     </div>

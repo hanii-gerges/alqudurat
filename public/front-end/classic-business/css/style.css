@@ -339,19 +339,19 @@ a {
 }
 
 .loader div:nth-child(1) {
-  background: #032a58;
+  background: #06212C;
   animation: ldio-8v0e2g029us 1.4492753623188404s linear infinite;
   animation-delay: -0.7246376811594202s;
 }
 
 .loader div:nth-child(2) {
-  background: #18191d;
+  background: #493740;
   animation: ldio-8v0e2g029us 1.4492753623188404s linear infinite;
   animation-delay: 0s;
 }
 
 .loader div:nth-child(3) {
-  background: #032a58;
+  background: #06212C;
   animation: ldio-8v0e2g029us-o 1.4492753623188404s linear infinite;
   animation-delay: -0.7246376811594202s;
 }

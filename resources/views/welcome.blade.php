@@ -11,7 +11,7 @@
                  <!-- SLIDE-3 -->
                  <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="{{asset('front-end/classic-business/sliders/3.jpg')}}"  data-rotate="0"  data-saveperformance="off"  data-title="Slide 1" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     <!-- MAIN IMAGE -->
-                    <img src="{{asset('front-end/classic-business/img/banner.jpeg')}}"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                    <img src="{{asset('front-end/classic-business/banner.jpeg')}}"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
                     <!-- LAYERS -->
                     
                     <!-- LAYER NR. 3 -->
@@ -31,12 +31,11 @@
                        data-paddingright="[0,0,0,0]"
                        data-paddingbottom="[0,0,0,0]"
                        data-paddingleft="[0,0,0,0]"
-                       style="z-index: 7; white-space: normal; font-size: 25px;   color: #fff; letter-spacing: 0px; line-height: 1.3"><span style="font-size: 20px">Delivering a wide range of industrial services solutions, in partnership with the Original Equipment Manufacture.</span>
+                       style="z-index: 7; white-space: normal; font-size: 25px;   color: white; letter-spacing: 0px; line-height: 1.3"><span style="font-size: 20px">Delivering a wide range of industrial services solutions, in partnership with the Original Equipment Manufacture.</span>
                        <br>
                        <br>
                        <div class="cube-button">
                         <a class="btn  btn-light-blue btn-hvr-light-blue" style="color: #eaeef3;
-                        background-color: #1A203c;
                         border-color: #fff;
                         border-radius: 50px;" href="/categories">
                            Discover
